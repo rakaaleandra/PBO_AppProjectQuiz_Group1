@@ -29,9 +29,16 @@ public class Menu implements ActionListener{
     JButton tekateki, gambar, categori;
     ImageIcon gambar1, gambar2;
     ArrayList<JPanel> kosong;
-
+    Data data;
+    // Export export;
+    
     Menu(JFrame frame){
+        data = new Data();
+        // buffing.pengisian();
+        // export = new Export();
+        
         try{
+            // export.start();
             UIManager.setLookAndFeel(new FlatMacDarkLaf());
             SwingUtilities.invokeLater(()->{
                 this.frame = frame;
@@ -106,6 +113,8 @@ public class Menu implements ActionListener{
             
         }catch(UnsupportedLookAndFeelException e){
             System.out.println(e.getMessage());
+        }catch(Exception e){
+            System.out.println(e.getMessage());
         }
     }
     
@@ -128,7 +137,7 @@ public class Menu implements ActionListener{
         if (e.getSource() == tekateki) {
             System.out.println("klik");
             frame.remove(panelMain);
-            Quiztekateki quiz = new Quiztekateki(frame);
+            Quiztekateki quiz = new Quiztekateki(frame, data.getData());
         }
         else if (e.getSource() == gambar){
             System.out.println("konci");
@@ -136,4 +145,13 @@ public class Menu implements ActionListener{
             Quizgambar quiz = new Quizgambar(frame);
         }
     }
+
+    // public class Export extends Thread{
+    //     @Override
+    //     public void run(){
+    //         Data buffing = new Data();
+    //         buffing.pengisian();
+    //         data = buffing.getData();
+    //     }
+    // }
 }
