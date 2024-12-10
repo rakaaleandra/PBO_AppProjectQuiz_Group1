@@ -85,8 +85,9 @@ public class Quizgambar {
             answer.add(new JButton("Jawaban" + i));
             inJawaban.add(answer.get(i));
         }
-        jawaban.add(inJawaban, BorderLayout.CENTER);
-        jawaban.add(hint, BorderLayout.EAST);
+        povJawaban.add(hint, BorderLayout.EAST);
+        povJawaban.add(inJawaban, BorderLayout.CENTER);
+        jawaban.add(povJawaban, BorderLayout.CENTER);
 
         inPertanyaan = new JPanel();
         question = new JLabel("pertanyaan");
