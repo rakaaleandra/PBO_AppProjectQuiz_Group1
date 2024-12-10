@@ -13,7 +13,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class Quiztekateki implements ActionListener{
+import com.app_project.Data.question;
+
+public final class Quiztekateki implements ActionListener{
     JPanel panelMain, stage, jawaban, pertanyaan, pov;
     ArrayList<JPanel> kosong1, kosong2, kosong3;
     JPanel inStage, inJawaban, inPertanyaan;
@@ -22,9 +24,16 @@ public class Quiztekateki implements ActionListener{
     JLabel question;
     static JFrame frame;
     waktu time;
+    int currentStage = 0;
+    ArrayList<question> data;
 
-    Quiztekateki(JFrame frame){
+    Quiztekateki(JFrame frame, ArrayList<question> data){
+        this.data = data;
         Quiztekateki.frame = frame;
+        framing();
+    }
+
+    public void framing(){
         panelMain = new JPanel(new BorderLayout(10,10));
         kosong1 = new ArrayList<>();
         kosong2 = new ArrayList<>();
@@ -83,11 +92,27 @@ public class Quiztekateki implements ActionListener{
         }
 
         inJawaban = new JPanel(new GridLayout(2,2));
-        for (int i = 0; i < 4; i++) {
-            answer.add(new JButton("Jawaban" + i));
-            answer.get(i).addActionListener(this);
-            inJawaban.add(answer.get(i));
-        }
+        //kalau data array
+        // for (int i = 0; i < 4; i++) {
+        //     answer.add(new JButton("Jawaban" + i));
+        //     answer.get(i).addActionListener(this);
+        //     inJawaban.add(answer.get(i));
+        // }
+
+        //kalau data manual
+        answer.add(new JButton(data.get(currentStage).jawaban1));
+        answer.get(0).addActionListener(this);
+        inJawaban.add(answer.get(0));
+        answer.add(new JButton(data.get(currentStage).jawaban2));
+        answer.get(1).addActionListener(this);
+        inJawaban.add(answer.get(1));
+        answer.add(new JButton(data.get(currentStage).jawaban3));
+        answer.get(2).addActionListener(this);
+        inJawaban.add(answer.get(2));
+        answer.add(new JButton(data.get(currentStage).jawaban4));
+        answer.get(3).addActionListener(this);
+        inJawaban.add(answer.get(3));
+
         jawaban.add(inJawaban, BorderLayout.CENTER);
 
         inPertanyaan = new JPanel();
@@ -104,12 +129,71 @@ public class Quiztekateki implements ActionListener{
         time = new waktu();
         time.start();
     }
+
     @Override
     public void actionPerformed(ActionEvent e){
         if (e.getSource() == answer.get(0)) {
-            System.out.println("dontol");
-            time.interrupt();
+            if (data.get(currentStage).benar == 1) {
+                levelUp();
+                time.interrupt();
+                // time.start();
+            }
+            else{
+                JPanel paneling = new JPanel();
+                paneling.setBackground(Color.BLACK);
+                System.out.println("dontol");
+                time.interrupt();
+            }
         }
+        if (e.getSource() == answer.get(1)) {
+            if (data.get(currentStage).benar == 2) {
+                levelUp();
+                time.interrupt();
+                // time.start();
+            }
+            else{
+                JPanel paneling = new JPanel();
+                paneling.setBackground(Color.BLACK);
+                System.out.println("dontol");
+                time.interrupt();
+            }
+        }
+        if (e.getSource() == answer.get(2)) {
+            if (data.get(currentStage).benar == 3) {
+                levelUp();
+                time.interrupt();
+                // time.start();
+            }
+            else{
+                JPanel paneling = new JPanel();
+                paneling.setBackground(Color.BLACK);
+                System.out.println("dontol");
+                time.interrupt();
+            }
+        }
+        if (e.getSource() == answer.get(3)) {
+            if (data.get(currentStage).benar == 4) {
+                levelUp();
+                time.interrupt();
+                // time.start();
+            }
+            else{
+                JPanel paneling = new JPanel();
+                paneling.setBackground(Color.BLACK);
+                System.out.println("dontol");
+                time.interrupt();
+            }
+        }
+    }
+
+    public void levelUp(){
+        ++currentStage;
+        // answer.set(0, new JButton(data.get(currentStage).jawaban1));
+        // answer.set(1, new JButton(data.get(currentStage).jawaban2));
+        // answer.set(2, new JButton(data.get(currentStage).jawaban3));
+        // answer.set(3, new JButton(data.get(currentStage).jawaban4));
+        frame.remove(panelMain);
+        framing();
     }
 
     public class waktu extends Thread{

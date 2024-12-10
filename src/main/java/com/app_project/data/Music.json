@@ -1,0 +1,124 @@
+{
+    "array": [
+        {
+            "pertanyaan": "Now there's drama (drama), found a club for that . Apa judul lagu dari lirik tersebut?",
+            "string1": "Lowkey",
+            "string2": "Every Summertime",
+            "string3": "Oceans & Engines",
+            "string4": "High school in Jakarta",
+            "benar": 4
+        },
+        {
+            "pertanyaan": "Melihat tawamu~. Mendengar senandungmu~ . Judul lagunya adalah ...",
+            "string1": "Anugerah Terindah",
+            "string2": "Hari Bersamanya",
+            "string3": "Anugrah Terindah yang Pernah Kumiliki",
+            "string4": "Buat Aku Tersenyum",
+            "benar": 3
+        },
+        {
+            "pertanyaan": "'Bangun pemudi pemuda Indonesia ...' Apa lanjutan lirik lagu ini??",
+            "string1": "Lengan Bajumu Singkirkan untuk negara",
+            "string2": "Tangan bajumu singkirkan untuk negara",
+            "string3": "Lengan bajumu singsingkan untuk negara",
+            "string4": "Tangan bajumu singsingkan untuk negara",
+            "benar": 4
+        },
+        {
+            "pertanyaan": "Sambung lirik dari 'It's me, hi, i'm the problem, it's me...'",
+            "string1": "My bad sign, everybody can see",
+            "string2": "At tea time, everybody agrees",
+            "string3": "At all times",
+            "string4": "I'll make time, everybody agrees",
+            "benar": 2
+        },
+        {
+            "pertanyaan": "Lagu 'Blue Bird' pada opening Naruto Shippuden dibawakan oleh ?",
+            "string1": "Kana-Boon",
+            "string2": "Ikimono Gakari",
+            "string3": "Daisuke",
+            "string4": "PelleK",
+            "benar": 2
+        },
+        {
+            "pertanyaan": "Siapakah pencipta lagu legendaris Indonesia 'Bengawan Solo'?",
+            "string1": "Titiek Puspa",
+            "string2": "Denny Caknan",
+            "string3": "NDX",
+            "string4": "Gesang",
+            "benar": 4
+        },
+        {
+            "pertanyaan": "Potongan lirik yang benar dari hymne/mars UNS adalah..",
+            "string1": "Rasa teguh dalam hati",
+            "string2": "Diluhurkanlah namamu",
+            "string3": "Untuk negeri tercinta",
+            "string4": "Biru hijau kampusku",
+            "benar": 2
+        },
+        {
+            "pertanyaan": "'And I swear that everyday you'll get better'. Judul lagu ini adalah",
+            "string1": "I knew I Love You",
+            "string2": "I Met You In The Dark",
+            "string3": "Say You Won't Let Go",
+            "string4": "Say Something",
+            "benar": 3
+        },
+        {
+            "pertanyaan": "Siapa penyanyi lagu 'Jiwa yang Bersedih'?",
+            "string1": "Gea Indrawati",
+            "string2": "Ghea Indrawari",
+            "string3": "Gea Indrawari",
+            "string4": "Ghea Indrawari",
+            "benar": 4
+        },
+        {
+            "pertanyaan": "'Tebak judul lagu indonesia (lirik diubah jadi bahasa inggris) Your eyes weaken me, When I first saw you, And honestly, I never felt, I've never felt this way.'",
+            "string1": "Mata ke Hati",
+            "string2": "Cinta Luar Biasa",
+            "string3": "Dari Mata",
+            "string4": "Bersamamu",
+            "benar": 3
+        },
+        {
+            "pertanyaan": "'Feel the rhythm getting louder, show the world what we can do' Siapa penyanyinya dan apa judulnya?",
+            "string1": "Shakira – Waka Waka",
+            "string2": "David Guetta ft. Usher – Without You",
+            "string3": "K'naan – Wavin' Flag",
+            "string4": "Jennifer Lopez ft. Pitbull – We Are One (Ole Ola)",
+            "benar": 4
+        },
+        {
+            "pertanyaan": "'Belum ada satu bulan~' nama lengkap penyayi lagu dari potongan lirik tersebut adalah",
+            "string1": "Bernadya Ribka Jayakusuma",
+            "string2": "Bernadya JayaKusuma",
+            "string3": "Bernadya Kusumawati",
+            "string4": "Bernadia Riska Kusumawati",
+            "benar": 1
+        },
+        {
+            "pertanyaan": "'Tempat mencari segala kebutuhan, belanja puas dengan harga hemat'. Jingle dari minimarket mana ini?",
+            "string1": "Alfamart",
+            "string2": "Alfamidi",
+            "string3": "Indomaret",
+            "string4": "Luwes",
+            "benar": 2
+        },
+        {
+            "pertanyaan": "'Nobody said it was easy' apa lanjutan lirik ini?",
+            "string1": "It's such a shame for us to part",
+            "string2": "But no one said it would be so hard",
+            "string3": "I never thought I'd fall so far",
+            "string4": "It's something I can't restart",
+            "benar": 1
+        },
+        {
+            "pertanyaan": "'I used to rule the world, seas would rise when I gave the word' apa sambungan lirik tersebut?",
+            "string1": "And all the battles I've ever known",
+            "string2": "And I hold my breath in the throne",
+            "string3": "Now in the morning I sleep alone",
+            "string4": "Now the world feels cold and old",
+            "benar": 3
+        }
+    ]
+}
