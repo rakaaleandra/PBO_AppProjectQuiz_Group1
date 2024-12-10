@@ -20,8 +20,11 @@ public class Quiztekateki implements ActionListener{
     ArrayList<JLabel> level;
     ArrayList<JButton> answer;
     JLabel question;
+    static JFrame frame;
+    waktu time;
 
     Quiztekateki(JFrame frame){
+        Quiztekateki.frame = frame;
         panelMain = new JPanel(new BorderLayout(10,10));
         kosong1 = new ArrayList<>();
         kosong2 = new ArrayList<>();
@@ -98,11 +101,36 @@ public class Quiztekateki implements ActionListener{
 
         frame.add(panelMain);
         frame.setVisible(true);
+        time = new waktu();
+        time.start();
     }
     @Override
     public void actionPerformed(ActionEvent e){
         if (e.getSource() == answer.get(0)) {
             System.out.println("dontol");
+            time.interrupt();
+        }
+    }
+
+    public class waktu extends Thread{
+        @Override
+        public void run(){
+            
+            JPanel paneling = new JPanel();
+            paneling.setBackground(Color.BLACK);
+            try {
+                for (int i = 0; i < 10; i++) {
+                    System.out.println(i);
+                    Thread.sleep(1000);
+                    if (i == 9) {
+                        frame.remove(panelMain);
+                        frame.add(paneling);
+                        frame.setVisible(true);
+                    }
+                }
+            } catch (InterruptedException e) {
+                System.out.println(e.getMessage());
+            }
         }
     }
 }

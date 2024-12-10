@@ -88,7 +88,7 @@ public class Menu implements ActionListener{
                 title.setVerticalAlignment(JLabel.CENTER);
                 title.setHorizontalAlignment(JLabel.CENTER);
                 title.setForeground(Color.WHITE);
-                title.setPreferredSize(new Dimension(100,100));
+                title.setPreferredSize(new Dimension(50,50));
                 title.setBackground(new Color(12,20,68,255));
                 title.setOpaque(true);
         
