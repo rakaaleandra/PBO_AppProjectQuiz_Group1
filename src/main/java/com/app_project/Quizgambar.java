@@ -11,7 +11,6 @@ import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -30,10 +29,10 @@ public final class Quizgambar implements ActionListener{
     JLabel questionLabel;
     JButton hint;
     int currentStage = 0, hintCapacity = 0;
-    JFrame frame;
+    JLabel frame;
     ArrayList<picture> data;
 
-    Quizgambar(JFrame frame, ArrayList<picture> data){
+    Quizgambar(JLabel frame, ArrayList<picture> data){
         this.frame = frame;
         this.data = data;
         framing();
@@ -125,7 +124,7 @@ public final class Quizgambar implements ActionListener{
         panelMain.add(stage, BorderLayout.EAST);
         panelMain.setBackground(new Color(12,20,68,255));
 
-        this.frame.add(panelMain);
+        this.frame.add(panelMain, BorderLayout.CENTER);
         this.frame.setVisible(true);
     }
 

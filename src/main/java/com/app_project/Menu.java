@@ -11,7 +11,6 @@ import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
@@ -23,7 +22,7 @@ import com.formdev.flatlaf.themes.FlatMacDarkLaf;
 public class Menu implements ActionListener{
     //deklarasi attribute
     
-    JFrame frame;
+    JLabel frame;
     JPanel panelMain, paneltekateki, panelgambar;
     JLabel title;
     JButton tekateki, gambar, categori;
@@ -32,8 +31,8 @@ public class Menu implements ActionListener{
     Data data;
     // Export export;
     
-    Menu(JFrame frame){
-        data = new Data();
+    Menu(JLabel frame){
+        this.data = new Data();
         // buffing.pengisian();
         // export = new Export();
         
@@ -141,15 +140,14 @@ public class Menu implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e){
         if (e.getSource() == tekateki) {
-            System.out.println("klik");
             frame.remove(panelMain);
             Quiztekateki quiz = new Quiztekateki(frame, data.getData());
             frame.setVisible(true);
         }
         else if (e.getSource() == gambar){
-            System.out.println("konci");
             frame.remove(panelMain);
             Quizgambar quiz = new Quizgambar(frame, data.getDataGambar());
+            frame.setVisible(true);
         }
     }
 

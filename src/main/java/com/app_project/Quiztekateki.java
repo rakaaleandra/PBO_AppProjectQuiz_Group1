@@ -26,12 +26,12 @@ public final class Quiztekateki implements ActionListener{
     ArrayList<JLabel> level;
     ArrayList<JButton> answer;
     JLabel question, timerView;
-    JFrame frame;
+    JLabel frame;
     waktu time;
     int currentStage = 0;
     ArrayList<question> data;
 
-    Quiztekateki(JFrame frame, ArrayList<question> data){
+    Quiztekateki(JLabel frame, ArrayList<question> data){
         this.data = data;
         this.frame = frame;
         framing();
