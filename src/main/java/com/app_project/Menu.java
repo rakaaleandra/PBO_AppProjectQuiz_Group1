@@ -24,6 +24,7 @@ public class Menu implements ActionListener{
     //deklarasi attribute
     
     JFrame frame;
+    JLabel framing;
     JPanel panelMain, paneltekateki, panelgambar;
     JLabel title;
     JButton tekateki, gambar, categori;
@@ -32,8 +33,8 @@ public class Menu implements ActionListener{
     Data data;
     // Export export;
     
-    Menu(JFrame frame){
-        data = new Data();
+    Menu(JFrame frame, JLabel framing){
+        this.data = new Data();
         // buffing.pengisian();
         // export = new Export();
         
@@ -42,6 +43,7 @@ public class Menu implements ActionListener{
             UIManager.setLookAndFeel(new FlatMacDarkLaf());
             SwingUtilities.invokeLater(()->{
                 this.frame = frame;
+                this.framing = framing;
                 //memberi object pada attribute
                 panelMain = new JPanel(new GridLayout(1,2,100,100));
                 paneltekateki = new JPanel(new BorderLayout());
@@ -57,6 +59,7 @@ public class Menu implements ActionListener{
                     kosong.add(new JPanel());
                     kosong.get(i).setBackground(new Color(12,20,68,255));
                     kosong.get(i).setPreferredSize(new Dimension(100,100));
+                    kosong.get(i).setOpaque(false);
                 }
         
                 //mamasukkan gambar dan memanipulasi ukuran gambar
@@ -77,14 +80,17 @@ public class Menu implements ActionListener{
                 paneltekateki.add(kosong.get(1), BorderLayout.EAST);
                 paneltekateki.add(kosong.get(2), BorderLayout.SOUTH);
                 paneltekateki.add(kosong.get(3), BorderLayout.WEST);
+                paneltekateki.setOpaque(false);
                 paneltekateki.add(tekateki, BorderLayout.CENTER);
                 
                 panelgambar.add(kosong.get(4), BorderLayout.NORTH);
                 panelgambar.add(kosong.get(5), BorderLayout.WEST);
                 panelgambar.add(kosong.get(6), BorderLayout.SOUTH);
                 panelgambar.add(kosong.get(7), BorderLayout.EAST);
+                panelgambar.setOpaque(false);
                 panelgambar.add(gambar, BorderLayout.CENTER);
         
+                panelMain.setOpaque(false);
                 panelMain.add(paneltekateki);
                 panelMain.add(panelgambar);
                 
@@ -97,17 +103,19 @@ public class Menu implements ActionListener{
                 title.setForeground(Color.WHITE);
                 title.setPreferredSize(new Dimension(50,50));
                 title.setBackground(new Color(12,20,68,255));
-                title.setOpaque(true);
+                title.setOpaque(false);
         
                 //button action
                 tekateki.setFocusable(false);
-                gambar.setFocusable(false);
                 tekateki.addActionListener(this);
+                tekateki.setOpaque(false);
+                gambar.setFocusable(false);
                 gambar.addActionListener(this);
+                gambar.setOpaque(false);
                 
                 //memasukan panel pada frame
-                this.frame.add(title, BorderLayout.NORTH);
-                this.frame.add(panelMain, BorderLayout.CENTER);
+                this.framing.add(title, BorderLayout.NORTH);
+                this.framing.add(panelMain, BorderLayout.CENTER);
                 // frame.add(kosong.get(0), BorderLayout.WEST);
             });
             
@@ -119,8 +127,8 @@ public class Menu implements ActionListener{
     }
     
     void image(){
-        gambar1 = new ImageIcon("src/main/resources/apalah.jpg");
-        gambar2 = new ImageIcon("src/main/resources/apalah.jpg");
+        gambar1 = new ImageIcon("src/main/resources/menutekateki.png");
+        gambar2 = new ImageIcon("src/main/resources/pngaaa.com-5340319.png");
         
         Image temp1 = gambar1.getImage();
         Image temp2 = gambar2.getImage();
@@ -135,15 +143,14 @@ public class Menu implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e){
         if (e.getSource() == tekateki) {
-            System.out.println("klik");
-            frame.remove(panelMain);
-            Quiztekateki quiz = new Quiztekateki(frame, data.getData());
+            framing.remove(panelMain);
+            Quiztekateki quiz = new Quiztekateki(frame, framing, data.getData());
             frame.setVisible(true);
         }
         else if (e.getSource() == gambar){
-            System.out.println("konci");
-            frame.remove(panelMain);
-            Quizgambar quiz = new Quizgambar(frame, data.getDataGambar());
+            framing.remove(panelMain);
+            Quizgambar quiz = new Quizgambar(frame, framing, data.getDataGambar());
+            frame.setVisible(true);
         }
     }
 

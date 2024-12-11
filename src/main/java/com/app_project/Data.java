@@ -25,6 +25,11 @@ public final class Data {
 
         pengisianTekaTeki("src/main/java/com/app_project/data/Music.json");
         pengisianTekaTeki("src/main/java/com/app_project/data/Informatika.json");
+        pengisianTekaTeki("src/main/java/com/app_project/data/Film.json");
+        pengisianTekaTeki("src/main/java/com/app_project/data/FnB.json");
+        pengisianTekaTeki("src/main/java/com/app_project/data/Game.json");
+        pengisianTekaTeki("src/main/java/com/app_project/data/Geografi.json");
+        pengisianTekaTeki("src/main/java/com/app_project/data/PengetahuanUmum.json");
         pengisianGambar("src/main/java/com/app_project/data/Gambar.json");
 
         for (int i = 0; i < 15; ++i) {

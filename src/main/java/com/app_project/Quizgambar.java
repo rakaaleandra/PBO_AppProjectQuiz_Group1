@@ -31,10 +31,12 @@ public final class Quizgambar implements ActionListener{
     JButton hint;
     int currentStage = 0, hintCapacity = 0;
     JFrame frame;
+    JLabel framing;
     ArrayList<picture> data;
 
-    Quizgambar(JFrame frame, ArrayList<picture> data){
+    Quizgambar(JFrame frame, JLabel framing, ArrayList<picture> data){
         this.frame = frame;
+        this.framing = framing;
         this.data = data;
         framing();
     }
@@ -108,6 +110,7 @@ public final class Quizgambar implements ActionListener{
         hint.addActionListener(this);
         submit.addActionListener(this);
         inJawaban = new JPanel(new BorderLayout());
+        answer.addActionListener(this);
         inJawaban.add(answer, BorderLayout.CENTER);
         inJawaban.add(submit, BorderLayout.EAST);
         povJawaban.add(hint, BorderLayout.EAST);
@@ -124,7 +127,8 @@ public final class Quizgambar implements ActionListener{
         panelMain.add(stage, BorderLayout.EAST);
         panelMain.setBackground(new Color(12,20,68,255));
 
-        this.frame.add(panelMain);
+        this.framing.add(panelMain, BorderLayout.CENTER);
+        // this.frame.pack();
         this.frame.setVisible(true);
     }
 
@@ -134,7 +138,7 @@ public final class Quizgambar implements ActionListener{
             --hintCapacity;
             System.out.println("hint");
         }
-        else if (e.getSource() == submit) {
+        else if (e.getSource() == submit || e.getSource() == submit) {
             String jawab = answer.getText();
             if (jawab.equals(data.get(currentStage).answerRight)) {
                 if (currentStage == 10) {
@@ -144,8 +148,8 @@ public final class Quizgambar implements ActionListener{
                     label.setFont(new Font("Arial", Font.BOLD, 20));
                     paneling.setBackground(Color.BLACK);
                     paneling.add(label);
-                    this.frame.remove(panelMain);
-                    this.frame.add(paneling, BorderLayout.CENTER);
+                    this.framing.remove(panelMain);
+                    this.framing.add(paneling, BorderLayout.CENTER);
                     this.frame.setVisible(true);
                 }
                 else if (currentStage < 10){
@@ -161,7 +165,7 @@ public final class Quizgambar implements ActionListener{
 
     public void levelUp(){
         ++currentStage;
-        this.frame.remove(panelMain);
+        this.framing.remove(panelMain);
         framing();
     }
 }

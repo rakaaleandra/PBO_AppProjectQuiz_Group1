@@ -4,9 +4,11 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.runtime.TemplateRuntime;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
@@ -14,6 +16,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 import javax.swing.Timer;
 
 import com.app_project.Data.question;
@@ -24,15 +27,17 @@ public final class Quiztekateki implements ActionListener{
     JPanel inStage, inJawaban, inPertanyaan;
     ArrayList<JLabel> level;
     ArrayList<JButton> answer;
-    JLabel question;
+    JLabel question, timerView;
     JFrame frame;
+    JLabel framing;
     waktu time;
     int currentStage = 0;
     ArrayList<question> data;
 
-    Quiztekateki(JFrame frame, ArrayList<question> data){
+    Quiztekateki(JFrame frame, JLabel framing, ArrayList<question> data){
         this.data = data;
         this.frame = frame;
+        this.framing = framing;
         framing();
     }
 
@@ -69,6 +74,10 @@ public final class Quiztekateki implements ActionListener{
             kosong2.get(i).setBackground(new Color(25,25,57,255));
             kosong3.get(i).setBackground(new Color(25,25,57,255));
         }
+        //before
+        timerView = new JLabel();
+        kosong2.get(0).add(timerView);
+
         stage.add(kosong1.get(0), BorderLayout.NORTH);
         stage.add(kosong1.get(1), BorderLayout.WEST);
         stage.add(kosong1.get(2), BorderLayout.SOUTH);
@@ -87,6 +96,8 @@ public final class Quiztekateki implements ActionListener{
             for (int i = 0; i < 15; ++i) {
                 level.add(new JLabel("Level " + (i+1)));
                 level.get(i).setForeground(Color.WHITE);
+                level.get(i).setVerticalAlignment(JLabel.CENTER);
+                level.get(i).setHorizontalAlignment(JLabel.CENTER);
                 inStage.add(level.get(i));
                 if (level.size() == currentStage+1) {
                     level.get(i).setBackground(Color.WHITE);
@@ -131,8 +142,10 @@ public final class Quiztekateki implements ActionListener{
 
         jawaban.add(inJawaban, BorderLayout.CENTER);
 
-        inPertanyaan = new JPanel();
+        inPertanyaan = new JPanel(new GridBagLayout());
+        inPertanyaan.setBackground(new Color(25,25,57,255));
         question = new JLabel(data.get(currentStage).pertanyaan);
+        question.setForeground(Color.WHITE);
         inPertanyaan.add(question);
         pertanyaan.add(inPertanyaan, BorderLayout.CENTER);
 
@@ -140,7 +153,7 @@ public final class Quiztekateki implements ActionListener{
         panelMain.add(stage, BorderLayout.WEST);
         panelMain.setBackground(new Color(12,20,68,255));
 
-        this.frame.add(panelMain);
+        this.framing.add(panelMain);
         this.frame.setVisible(true);
         time = new waktu();
         // this.time = new waktu();
@@ -152,70 +165,33 @@ public final class Quiztekateki implements ActionListener{
         if (e.getSource() == answer.get(0)) {
             if (data.get(currentStage).benar == 1) {
                 levelUp();
-                // time.interrupt();
-                // time.cancelTimer();
-                // time.start();
             }
             else{
-                // JPanel paneling = new JPanel();
-                // JLabel label = new JLabel("Selamat Anda Salah");
-                // label.setForeground(Color.WHITE);
-                // label.setFont(new Font("Arial", Font.BOLD, 20));
-                // paneling.setBackground(Color.BLACK);
-                // paneling.add(label);
-                // this.frame.remove(panelMain);
-                // this.frame.add(paneling, BorderLayout.CENTER);
-                // this.frame.setVisible(true);
                 time.berhenti();
                 JOptionPane.showMessageDialog(frame, "Game Over! Jawabanmu Salah.", "Game Over", JOptionPane.WARNING_MESSAGE);      
                     System.exit(0);
-                // time.interrupt();
             }
         }
         if (e.getSource() == answer.get(1)) {
             if (data.get(currentStage).benar == 2) {
                 levelUp();
-                // time.interrupt();
-                // time.cancelTimer();
-                // time.start();
             }
             else{
-                // JPanel paneling = new JPanel();
-                // JLabel label = new JLabel("Selamat Anda Salah");
-                // label.setForeground(Color.WHITE);
-                // label.setFont(new Font("Arial", Font.BOLD, 20));
-                // paneling.setBackground(Color.BLACK);
-                // paneling.add(label);
-                // this.frame.remove(panelMain);
-                // this.frame.add(paneling, BorderLayout.CENTER);
-                // this.frame.setVisible(true);
                 time.berhenti();
                 JOptionPane.showMessageDialog(frame, "Game Over! Jawabanmu Salah.", "Game Over", JOptionPane.WARNING_MESSAGE);      
                     System.exit(0);
-                // time.interrupt();
+                
             }
         }
         if (e.getSource() == answer.get(2)) {
             if (data.get(currentStage).benar == 3) {
                 levelUp();
-                // time.interrupt();
-                // time.cancelTimer();
-                // time.start();
             }
             else{
-                // JPanel paneling = new JPanel();
-                // JLabel label = new JLabel("Selamat Anda Salah");
-                // label.setForeground(Color.WHITE);
-                // label.setFont(new Font("Arial", Font.BOLD, 20));
-                // paneling.setBackground(Color.BLACK);
-                // paneling.add(label);
-                // this.frame.remove(panelMain);
-                // this.frame.add(paneling, BorderLayout.CENTER);
-                // this.frame.setVisible(true);
                 time.berhenti();
                 JOptionPane.showMessageDialog(frame, "Game Over! Jawabanmu Salah.", "Game Over", JOptionPane.WARNING_MESSAGE);      
                     System.exit(0);
-                // time.interrupt();
+                    // new Menu(this.frame);
             }
         }
         if (e.getSource() == answer.get(3)) {
@@ -251,9 +227,17 @@ public final class Quiztekateki implements ActionListener{
         time.berhenti();
         ++currentStage;
         if(currentStage < 15){
-            // rehat();
-            this.frame.remove(panelMain);
-            framing();
+            JPanel paneling = new JPanel(new GridBagLayout());
+            JLabel label = new JLabel("Jawabanmu benar");
+            label.setForeground(Color.WHITE);
+            label.setFont(new Font("Arial", Font.BOLD, 20));
+            paneling.setBackground(new Color(25,25,57,255));
+            paneling.add(label);
+            this.pov.remove(pertanyaan);
+            this.pov.remove(jawaban);
+            this.pov.add(paneling, BorderLayout.CENTER);
+            this.frame.setVisible(true);
+            rehat();
         }
         else if (currentStage == 15) {
             JPanel paneling = new JPanel();
@@ -262,30 +246,36 @@ public final class Quiztekateki implements ActionListener{
             label.setFont(new Font("Arial", Font.BOLD, 20));
             paneling.setBackground(Color.BLACK);
             paneling.add(label);
-            this.frame.remove(panelMain);
-            this.frame.add(paneling, BorderLayout.CENTER);
+            this.framing.remove(panelMain);
+            this.framing.add(paneling, BorderLayout.CENTER);
             this.frame.setVisible(true);
         }
     }
 
     public void rehat(){
-        // JPanel paneling = new JPanel();
-        // JLabel label = new JLabel("Jawaban Anda Benar");
-        // label.setForeground(Color.WHITE);
-        // label.setFont(new Font("Arial", Font.BOLD, 20));
-        // paneling.setBackground(Color.BLACK);
-        // paneling.add(label);
         // this.frame.remove(panelMain);
-        // this.frame.add(paneling, BorderLayout.CENTER);
-        // this.frame.setVisible(true);
-        System.out.println("Jawaban Anda Benar");
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            System.out.println(e.getMessage());
-        }
-    }
+        final int[] renggat = {0};
+        Timer temptime = new Timer(1000, e -> {
+            // question.setText("Jawaban mu benar");
+            
+            // answer.get(0).setOpaque(false);
+            // answer.get(1).setOpaque(false);
+            // answer.get(2).setOpaque(false);
+            // answer.get(3).setOpaque(false);
+            // JPanel panelling = new JPanel();
+            // panelling.setBackground(Color.BLACK);
+            // inJawaban = panelling;
 
+            renggat[0]++;
+            System.out.println(renggat[0]);
+            if(renggat[0] == 3){
+                ((Timer) e.getSource()).stop();
+                this.framing.remove(panelMain);
+                framing();
+            }
+        });
+        temptime.start();
+    }
     public class waktu{
         Timer timer;
         int duration = 0;
@@ -298,12 +288,13 @@ public final class Quiztekateki implements ActionListener{
         public void update(){
             duration++;
             System.out.println(duration);
+            timerView.setText(Integer.toString(duration));
 
-            if (duration == 10) {
+            if (duration == 15) {
                 JPanel paneling = new JPanel();
                 paneling.setBackground(Color.BLACK);
-                frame.remove(panelMain);
-                frame.add(paneling);
+                framing.remove(panelMain);
+                framing.add(paneling);
                 frame.setVisible(true);
                 timer.stop();
             }
