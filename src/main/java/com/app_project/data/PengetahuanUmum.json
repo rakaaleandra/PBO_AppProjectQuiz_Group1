@@ -1,0 +1,124 @@
+{
+  "array": [
+    {
+      "pertanyaan": "Yang bukan matkul semester 2",
+      "string1": "Matdis 1",
+      "string2": "OSK",
+      "string3": "Kalkulus 1",
+      "string4": "SDA",
+      "benar" : "3"
+    },
+    {
+      "pertanyaan": "Prodi Informatika UNS berdiri pada tahun..",
+      "string1": "2006",
+      "string2": "2019",
+      "string3": "2007",
+      "string4": "2017",
+      "benar" : "3"
+    },
+    {
+      "pertanyaan": "Siapa itu Evin",
+      "string1": "Raka",
+      "string2": "Yosephin",
+      "string3": "Ravel",
+      "string4": "Robby",
+      "benar" : "2"
+    },
+    {
+      "pertanyaan": "Siapa itu Septi",
+      "string1": "Arya",
+      "string2": "Tito",
+      "string3": "Fajar",
+      "string4": "Rabu Legi",
+      "benar" : "3"
+    },
+    {
+      "pertanyaan": "Batu terkeras di dunia",
+      "string1": "Emas",
+      "string2": "Berlian",
+      "string3": "Batu Alam",
+      "string4": "Mutiara",
+      "benar" : "2"
+    },
+    {
+      "pertanyaan": "<html>Siapa Menteri Pendidikan Tinggi, Sains, <br>dan Teknologi saat ini..</html>",
+      "string1": "Fadli",
+      "string2": "Nadiem",
+      "string3": "Satryo",
+      "string4": "Stella",
+      "benar" : "3"
+    },
+    {
+      "pertanyaan": "Apa yang bisa terbang tanpa sayap?",
+      "string1": "Waktu",
+      "string2": "Burung",
+      "string3": "Angin",
+      "string4": "Air",
+      "benar" : "1"
+    },
+    {
+      "pertanyaan": "berapa Umur Lee Min Ho",
+      "string1": "30",
+      "string2": "35",
+      "string3": "37",
+      "string4": "40",
+      "benar" : "3"
+    },
+    {
+      "pertanyaan": "Bahasa Pemrograman Jaksel dibuat oleh?",
+      "string1": "Bagas Ari",
+      "string2": "Rio Chandra",
+      "string3": "Zeddy Iskandar",
+      "string4": "Bernaridho",
+      "benar" : "2"
+    },
+    {
+      "pertanyaan": "Virus Corona berasal dari wilayah mana ..?",
+      "string1": "Wuhan",
+      "string2": "Beijing",
+      "string3": "Shanghai",
+      "string4": "Tianjin",
+      "benar" : "1"
+    },
+    {
+      "pertanyaan": "Gejala demam yang perlu diwaspadai",
+      "string1": "Nafas Lancar",
+      "string2": "Tangan kaku",
+      "string3": "Leher Kaku",
+      "string4": "Muntah",
+      "benar" : "3"
+    },
+    {
+      "pertanyaan": "kapan tanggal lahir Orang dengan NIM 144",
+      "string1": "27 Feb",
+      "string2": "28 Maret",
+      "string3": "27 April",
+      "string4": "29 Mei",
+      "benar" : "1"
+    },
+    {
+      "pertanyaan": "Negara mana yang akhir-akhir ini menjalankan darurat militer",
+      "string1": "Arab",
+      "string2": "Bahrain",
+      "string3": "Amerika",
+      "string4": "Korea",
+      "benar" : "4"
+    },
+    {
+      "pertanyaan": "Berikut produk yang tidak pro Israel adalah ...",
+      "string1": "Aqua",
+      "string2": "Wings",
+      "string3": "Unilever",
+      "string4": "Nestle",
+      "benar" : "2"
+    },
+    {
+      "pertanyaan": "Negara mana yang termasuk dalam 10 negara terkaya di Dunia?",
+      "string1": "Indonesia",
+      "string2": "Korea",
+      "string3": "Jepang",
+      "string4": "Luksemburg",
+      "benar" : "4"
+    }
+  ]
+}

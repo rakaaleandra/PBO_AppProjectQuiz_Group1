@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,6 +16,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 import javax.swing.Timer;
 
 import com.app_project.Data.question;
@@ -26,14 +28,16 @@ public final class Quiztekateki implements ActionListener{
     ArrayList<JLabel> level;
     ArrayList<JButton> answer;
     JLabel question, timerView;
-    JLabel frame;
+    JFrame frame;
+    JLabel framing;
     waktu time;
     int currentStage = 0;
     ArrayList<question> data;
 
-    Quiztekateki(JLabel frame, ArrayList<question> data){
+    Quiztekateki(JFrame frame, JLabel framing, ArrayList<question> data){
         this.data = data;
         this.frame = frame;
+        this.framing = framing;
         framing();
     }
 
@@ -138,8 +142,10 @@ public final class Quiztekateki implements ActionListener{
 
         jawaban.add(inJawaban, BorderLayout.CENTER);
 
-        inPertanyaan = new JPanel();
+        inPertanyaan = new JPanel(new GridBagLayout());
+        inPertanyaan.setBackground(new Color(25,25,57,255));
         question = new JLabel(data.get(currentStage).pertanyaan);
+        question.setForeground(Color.WHITE);
         inPertanyaan.add(question);
         pertanyaan.add(inPertanyaan, BorderLayout.CENTER);
 
@@ -147,7 +153,7 @@ public final class Quiztekateki implements ActionListener{
         panelMain.add(stage, BorderLayout.WEST);
         panelMain.setBackground(new Color(12,20,68,255));
 
-        this.frame.add(panelMain);
+        this.framing.add(panelMain);
         this.frame.setVisible(true);
         time = new waktu();
         // this.time = new waktu();
@@ -221,6 +227,16 @@ public final class Quiztekateki implements ActionListener{
         time.berhenti();
         ++currentStage;
         if(currentStage < 15){
+            JPanel paneling = new JPanel(new GridBagLayout());
+            JLabel label = new JLabel("Jawabanmu benar");
+            label.setForeground(Color.WHITE);
+            label.setFont(new Font("Arial", Font.BOLD, 20));
+            paneling.setBackground(new Color(25,25,57,255));
+            paneling.add(label);
+            this.pov.remove(pertanyaan);
+            this.pov.remove(jawaban);
+            this.pov.add(paneling, BorderLayout.CENTER);
+            this.frame.setVisible(true);
             rehat();
         }
         else if (currentStage == 15) {
@@ -230,8 +246,8 @@ public final class Quiztekateki implements ActionListener{
             label.setFont(new Font("Arial", Font.BOLD, 20));
             paneling.setBackground(Color.BLACK);
             paneling.add(label);
-            this.frame.remove(panelMain);
-            this.frame.add(paneling, BorderLayout.CENTER);
+            this.framing.remove(panelMain);
+            this.framing.add(paneling, BorderLayout.CENTER);
             this.frame.setVisible(true);
         }
     }
@@ -240,11 +256,12 @@ public final class Quiztekateki implements ActionListener{
         // this.frame.remove(panelMain);
         final int[] renggat = {0};
         Timer temptime = new Timer(1000, e -> {
-            question.setText("Jawaban mu benar");
-            answer.get(0).setOpaque(false);
-            answer.get(1).setOpaque(false);
-            answer.get(2).setOpaque(false);
-            answer.get(3).setOpaque(false);
+            // question.setText("Jawaban mu benar");
+            
+            // answer.get(0).setOpaque(false);
+            // answer.get(1).setOpaque(false);
+            // answer.get(2).setOpaque(false);
+            // answer.get(3).setOpaque(false);
             // JPanel panelling = new JPanel();
             // panelling.setBackground(Color.BLACK);
             // inJawaban = panelling;
@@ -253,7 +270,7 @@ public final class Quiztekateki implements ActionListener{
             System.out.println(renggat[0]);
             if(renggat[0] == 3){
                 ((Timer) e.getSource()).stop();
-                this.frame.remove(panelMain);
+                this.framing.remove(panelMain);
                 framing();
             }
         });
@@ -276,8 +293,8 @@ public final class Quiztekateki implements ActionListener{
             if (duration == 15) {
                 JPanel paneling = new JPanel();
                 paneling.setBackground(Color.BLACK);
-                frame.remove(panelMain);
-                frame.add(paneling);
+                framing.remove(panelMain);
+                framing.add(paneling);
                 frame.setVisible(true);
                 timer.stop();
             }

@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -29,11 +30,13 @@ public final class Quizgambar implements ActionListener{
     JLabel questionLabel;
     JButton hint;
     int currentStage = 0, hintCapacity = 0;
-    JLabel frame;
+    JFrame frame;
+    JLabel framing;
     ArrayList<picture> data;
 
-    Quizgambar(JLabel frame, ArrayList<picture> data){
+    Quizgambar(JFrame frame, JLabel framing, ArrayList<picture> data){
         this.frame = frame;
+        this.framing = framing;
         this.data = data;
         framing();
     }
@@ -124,7 +127,8 @@ public final class Quizgambar implements ActionListener{
         panelMain.add(stage, BorderLayout.EAST);
         panelMain.setBackground(new Color(12,20,68,255));
 
-        this.frame.add(panelMain, BorderLayout.CENTER);
+        this.framing.add(panelMain, BorderLayout.CENTER);
+        // this.frame.pack();
         this.frame.setVisible(true);
     }
 
@@ -144,8 +148,8 @@ public final class Quizgambar implements ActionListener{
                     label.setFont(new Font("Arial", Font.BOLD, 20));
                     paneling.setBackground(Color.BLACK);
                     paneling.add(label);
-                    this.frame.remove(panelMain);
-                    this.frame.add(paneling, BorderLayout.CENTER);
+                    this.framing.remove(panelMain);
+                    this.framing.add(paneling, BorderLayout.CENTER);
                     this.frame.setVisible(true);
                 }
                 else if (currentStage < 10){
@@ -161,7 +165,7 @@ public final class Quizgambar implements ActionListener{
 
     public void levelUp(){
         ++currentStage;
-        this.frame.remove(panelMain);
+        this.framing.remove(panelMain);
         framing();
     }
 }

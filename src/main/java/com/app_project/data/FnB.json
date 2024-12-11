@@ -1,0 +1,124 @@
+{
+  "array": [
+    {
+      "pertanyaan": "Mana makanan khas dari Italia?",
+      "string1": "Capucino Cincau",
+      "string2": "Thermal Pasta",
+      "string3": "Pizza Nanas",
+      "string4": "Lasagna",
+      "benar" : "4"
+    },
+    {
+      "pertanyaan": "Mana makanan khas dari Madura?",
+      "string1": "Sate Taichan",
+      "string2": "Bebek Peking",
+      "string3": "Potu Nyilem",
+      "string4": "Rujak Cingur",
+      "benar" : "3"
+    },
+    {
+      "pertanyaan": "Apa minuman fermentasi tradisional dari Korea yang terbuat dari nasi ketan, ragi, dan air?",
+      "string1": "Soju",
+      "string2": "Makgeolli",
+      "string3": "Baekseju",
+      "string4": "Kimchi",
+      "benar" : "2"
+    },
+    {
+      "pertanyaan": "Roti padat asal Jerman",
+      "string1": "Baguette",
+      "string2": "Ciabatta",
+      "string3": "Pumpernickel",
+      "string4": "Rye bread",
+      "benar" : "3"
+    },
+    {
+      "pertanyaan": "Minuman khas Filipina yang terbuat dari kelapa dan gula aren",
+      "string1": "Taho",
+      "string2": "Sago",
+      "string3": "Buko Juice",
+      "string4": "Kalamansi Juice",
+      "benar" : "1"
+    },
+    {
+      "pertanyaan": "Apa minuman khas Prancis yang terbuat dari anggur merah atau putih?",
+      "string1": "Vodka",
+      "string2": "Wine",
+      "string3": "Champagne",
+      "string4": "Cider",
+      "benar" : "2"
+    },
+    {
+      "pertanyaan": "Sup terenak di dunia berasal dari negara",
+      "string1": "Indonesia",
+      "string2": "Jepang",
+      "string3": "Thailand",
+      "string4": "Paraguay",
+      "benar" : "4"
+    },
+    {
+      "pertanyaan": "Makanan terbuat dari buah durian difermentasi",
+      "string1": "Mandai",
+      "string2": "Tempoyak",
+      "string3": "Panada",
+      "string4": "Dodol",
+      "benar" : "2"
+    },
+    {
+      "pertanyaan": "Sate klathak berasal dari daerah?",
+      "string1": "Yogyakarta",
+      "string2": "Bali",
+      "string3": "Jawa Tengah",
+      "string4": "Jawa Timur",
+      "benar" : "1"
+    },
+    {
+      "pertanyaan": "Bahan utama membuat Mie Aceh adalah",
+      "string1": "Mie Telur",
+      "string2": "Mie Jagung",
+      "string3": "Mie Kuning Basah",
+      "string4": "Mie So",
+      "benar" : "3"
+    },
+    {
+      "pertanyaan": "Jenis biji kopi yang mengandung lebih banyak kafein daripada Arabica",
+      "string1": "Liberica",
+      "string2": "Excelsa",
+      "string3": "Mocha",
+      "string4": "Robusta",
+      "benar" : "4"
+    },
+    {
+      "pertanyaan": "Kombucha adalah minuman dari fermentasi apa?",
+      "string1": "Teh",
+      "string2": "Kelapa",
+      "string3": "Nanas",
+      "string4": "Jahe",
+      "benar" : "1"
+    },
+    {
+      "pertanyaan": "Apa makanan favorit Olaf di film Frozen (2013) yang ingin dia coba di musim panas?",
+      "string1": "Sop",
+      "string2": "Kue",
+      "string3": "Marshmallow Panggang",
+      "string4": "Es",
+      "benar" : "3"
+    },
+    {
+      "pertanyaan": "Apa jenis keju yang terkenal memiliki lubang-lubang di dalamnya?",
+      "string1": "Swiss",
+      "string2": "Cheddar",
+      "string3": "Mozza",
+      "string4": "Parmesan",
+      "benar" : "1"
+    },
+    {
+      "pertanyaan": "Yang bukan makanan khas Indonesia",
+      "string1": "Nasi Goreng",
+      "string2": "Soto",
+      "string3": "Gado-Gado",
+      "string4": "Nasi Lemak",
+      "benar" : "4"
+    }
+  ]
+}

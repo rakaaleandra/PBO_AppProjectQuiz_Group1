@@ -1,0 +1,124 @@
+{
+    "array": [
+        {
+            "pertanyaan": "Manakah yang mempublish eFootball?",
+            "string1": "Konami",
+            "string2": "SEGA",
+            "string3": "Bandai",
+            "string4": "EA",
+            "benar": 1
+        },
+        {
+            "pertanyaan": "Game Among Us berlatar di mana?",
+            "string1": "Sebuah kapal luar angkasa",
+            "string2": "Sebuah pulau tropis",
+            "string3": "Sebuah kastil kuno",
+            "string4": "Sebuah kota futuristik",
+            "benar": 1
+        },
+        {
+            "pertanyaan": "Karakter VALORANT yang tidak bisa skill Smoke adalah?",
+            "string1": "Brimstone",
+            "string2": "Jett",
+            "string3": "Omen",
+            "string4": "Sage",
+            "benar": 4
+        },
+        {
+            "pertanyaan": "Game mana yang sering disebut sebagai game sandbox?",
+            "string1": "Call of Duty",
+            "string2": "Minecraft",
+            "string3": "Halo",
+            "string4": "Final Fantasy",
+            "benar": 2
+        },
+        {
+            "pertanyaan": "Apa nama konsol pertama yang dirilis oleh Sony?",
+            "string1": "Nintendo 64",
+            "string2": "PlayStation",
+            "string3": "Sega Genesis",
+            "string4": "Xbox",
+            "benar": 2
+        },
+        {
+            "pertanyaan": "Siapa tokoh antagonis pada games COD MW 2?",
+            "string1": "Vaas",
+            "string2": "Shepherd",
+            "string3": "Big Smoke",
+            "string4": "Makarov",
+            "benar": 2
+        },
+        {
+            "pertanyaan": "Berapakah kartu yang dikorbankan untuk tribute summon kartu bintang 7/8 pada YuGiOh?",
+            "string1": "3",
+            "string2": "2",
+            "string3": "4",
+            "string4": "1",
+            "benar": 2
+        },
+        {
+            "pertanyaan": "Dalam seri Resident Evil, perusahaan apa yang menyebabkan wabah zombie?",
+            "string1": "Black Mesa",
+            "string2": "Umbrella Corporation",
+            "string3": "Raccoon Labs",
+            "string4": "Aperture Science",
+            "benar": 2
+        },
+        {
+            "pertanyaan": "Dalam game Minecraft, bahan apa yang digunakan untuk membuat obor?",
+            "string1": "Batu bara dan tongkat",
+            "string2": "Kayu dan batu bara",
+            "string3": "Batu dan api",
+            "string4": "Tongkat dan batu",
+            "benar": 1
+        },
+        {
+            "pertanyaan": "Game apa yang dianggap sebagai pelopor genre battle royale?",
+            "string1": "Fortnite",
+            "string2": "PlayerUnknown's Battlegrounds (PUBG)",
+            "string3": "Apex Legends",
+            "string4": "Call of Duty: Warzone",
+            "benar": 2
+        },
+        {
+            "pertanyaan": "Siapa tokoh protagonis pada The Legends of Zelda?",
+            "string1": "Ganondorf",
+            "string2": "Link",
+            "string3": "Sheikah",
+            "string4": "Zelda",
+            "benar": 2
+        },
+        {
+            "pertanyaan": "Karakter mana yang terkenal dalam game 'Street Fighter'?",
+            "string1": "Scorpion",
+            "string2": "Sub-Zero",
+            "string3": "Ryu",
+            "string4": "Samus",
+            "benar": 3
+        },
+        {
+            "pertanyaan": "Siapa karakter utama dalam seri game 'God of War'?",
+            "string1": "Arthas",
+            "string2": "Dante",
+            "string3": "Kratos",
+            "string4": "Zeus",
+            "benar": 4
+        },
+        {
+            "pertanyaan": "Berapa lama CD Flicker pada Mobile Legend?",
+            "string1": "110 detik",
+            "string2": "115 detik",
+            "string3": "120 detik",
+            "string4": "125 detik",
+            "benar": 3
+        },
+        {
+            "pertanyaan": "Apa nama protagonis dalam game The Witcher 3?",
+            "string1": "Geralt of Rivia",
+            "string2": "Ezio Auditore",
+            "string3": "Arthur Morgan",
+            "string4": "Kratos",
+            "benar": 1
+        }
+    ]
+}

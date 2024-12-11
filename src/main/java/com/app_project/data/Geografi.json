@@ -1,0 +1,124 @@
+{
+    "array": [
+        {
+            "pertanyaan": "Negara mana yang berbentuk seperti sepatu bot?",
+            "string1": "Malaysia",
+            "string2": "Yunani",
+            "string3": "Italia",
+            "string4": "Portugal",
+            "benar": 3
+        },
+        {
+            "pertanyaan": "Benua terkecil berdasarkan luas daratan adalah?",
+            "string1": "Eropa",
+            "string2": "Amerika Selatan",
+            "string3": "Antartika",
+            "string4": "Australia",
+            "benar": 4
+        },
+        {
+            "pertanyaan": "Pulau terluar Indonesia yang berdekatan dengan wilayah negara Filipina",
+            "string1": "Weh",
+            "string2": "Miangas",
+            "string3": "Nias",
+            "string4": "Anambas",
+            "benar": 2
+        },
+        {
+            "pertanyaan": "Selat yang memisahkan antara pulau Sumatera dan Kalimantan?",
+            "string1": "Gaspar",
+            "string2": "Sunda",
+            "string3": "Malaka",
+            "string4": "Karimata",
+            "benar": 4
+        },
+        {
+            "pertanyaan": "Berikut ini bukan konsep geografi, yaitu",
+            "string1": "Lokasi",
+            "string2": "Interaksi",
+            "string3": "Interelasi",
+            "string4": "Aglomerasi",
+            "benar": 3
+        },
+        {
+            "pertanyaan": "Negara dengan jumlah pulau terbanyak di dunia",
+            "string1": "Indonesia",
+            "string2": "Finlandia",
+            "string3": "Kanada",
+            "string4": "Swedia",
+            "benar": 4
+        },
+        {
+            "pertanyaan": "Ibukota Bahrain terletak di?",
+            "string1": "Manama",
+            "string2": "Nassau",
+            "string3": "Wina",
+            "string4": "Dhaka",
+            "benar": 1
+        },
+        {
+            "pertanyaan": "Sungai terpanjang di dunia adalah?",
+            "string1": "Sungai Amazon",
+            "string2": "Sungai Nil",
+            "string3": "Sungai Yangtze",
+            "string4": "Sungai Mississippi",
+            "benar": 2
+        },
+        {
+            "pertanyaan": "Negara di Afrika dengan populasi terbanyak adalah?",
+            "string1": "Afrika Selatan",
+            "string2": "Kenya",
+            "string3": "Nigeria",
+            "string4": "Mesir",
+            "benar": 3
+        },
+        {
+            "pertanyaan": "Benua dengan jumlah negara terbanyak adalah?",
+            "string1": "Afrika",
+            "string2": "Eropa",
+            "string3": "Asia",
+            "string4": "Amerika Selatan",
+            "benar": 1
+        },
+        {
+            "pertanyaan": "Tempat paling kering di dunia adalah?",
+            "string1": "Gurun Sahara",
+            "string2": "Gurun Atacama",
+            "string3": "Death Valley",
+            "string4": "Antartika",
+            "benar": 4
+        },
+        {
+            "pertanyaan": "Manakah gunung berapi tertinggi di dunia?",
+            "string1": "Ojos del Salado",
+            "string2": "Everest",
+            "string3": "Kilimanjaro",
+            "string4": "Mauna Loa",
+            "benar": 1
+        },
+        {
+            "pertanyaan": "Apa ibu kota Kanada?",
+            "string1": "Toronto",
+            "string2": "Ottawa",
+            "string3": "Vancouver",
+            "string4": "Montreal",
+            "benar": 2
+        },
+        {
+            "pertanyaan": "Negara mana yang memiliki zona waktu terbanyak?",
+            "string1": "Amerika Serikat",
+            "string2": "Rusia",
+            "string3": "Prancis",
+            "string4": "Kanada",
+            "benar": 4
+        },
+        {
+            "pertanyaan": "Sungai mana yang mengalir melalui Paris?",
+            "string1": "Rhein",
+            "string2": "Seine",
+            "string3": "Thames",
+            "string4": "Danube",
+            "benar": 2
+        }
+    ]
+}

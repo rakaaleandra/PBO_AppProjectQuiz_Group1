@@ -14,6 +14,7 @@ public class Main extends JFrame{
     // static Image gambaring;
     static JFrame frame;
     static JLabel background;
+    static ImageIcon img;
     static ArrayList<JPanel> kosongan;
     static void awalan(){
         frame = new JFrame("QUIZ WORLD");
@@ -27,7 +28,7 @@ public class Main extends JFrame{
         // frame.setLayout(new BorderLayout());
         frame.setBackground(Color.BLACK);
         
-        ImageIcon img = new ImageIcon("src/main/resources/bg1.jpg");
+        img = new ImageIcon("src/main/resources/bg1.jpg");
         background = new JLabel("", img, JLabel.CENTER);
         background.setBounds(0, 0, 1280, 720);
         frame.add(background);
@@ -52,10 +53,16 @@ public class Main extends JFrame{
     public static void main(String[] args) {
         awalan();
 
-        // Container container = frame.getContentPane();
-
-        Menu menu = new Menu(background);
+        Menu menu = new Menu(frame, background);
         
         akhiran();
     }
+
+    public class nyoba extends Thread{
+
+        public nyoba() {
+        }
+        
+    }
+
 }

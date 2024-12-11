@@ -1,0 +1,124 @@
+{
+  "array": [
+    {
+      "pertanyaan": "Manakah tim yang dilatih Ted Lasso pada series Ted Lasso?",
+      "string1": "London FC",
+      "string2": "AFC Richmon",
+      "string3": "Manchester Town",
+      "string4": "Arsenal",
+      "benar" : "2"
+    },
+    {
+      "pertanyaan": "Film dari Indonesia",
+      "string1": "The Raid",
+      "string2": "Crazy Rich Asians",
+      "string3": "Upin & Ipin",
+      "string4": "Boboiboy",
+      "benar" : "1"
+    },
+    {
+      "pertanyaan": "Manakah tokoh tertua dari Shelby bersaudara pada series Peaky Blinders?",
+      "string1": "Tom Shelby",
+      "string2": "Arthur Shelby",
+      "string3": "Ada Shelby",
+      "string4": "John Shelby",
+      "benar" : "2"
+    },
+    {
+      "pertanyaan": "Manakah tokoh teman sekelas Gojo pada series Jujutsu Kaisen?",
+      "string1": "Nanami",
+      "string2": "Hanami",
+      "string3": "Geto",
+      "string4": "Jogo",
+      "benar" : "3"
+    },
+    {
+      "pertanyaan": "Manakah rekan ketiga Luffy pada series One Piece",
+      "string1": "Zoro",
+      "string2": "Yasopp",
+      "string3": "Usopp",
+      "string4": "Nami",
+      "benar" : "3"
+    },
+    {
+      "pertanyaan": "Manakah anime tema sepakbola?",
+      "string1": "Ao Ashi",
+      "string2": "Dragon Ball",
+      "string3": "Haikyu!!",
+      "string4": "BLEACH",
+      "benar" : "1"
+    },
+    {
+      "pertanyaan": "Dalam film Spider-Man : No Way Home (2021) berapa banyak versi Spider-Man yang muncul?",
+      "string1": "1",
+      "string2": "2",
+      "string3": "3",
+      "string4": "4",
+      "benar" : "3"
+    },
+    {
+      "pertanyaan": "Film yang tidak menceritakan tentang zombie adalah ....",
+      "string1": "Traint to Busan",
+      "string2": "Parasite",
+      "string3": "Reuni Z",
+      "string4": "The Kingdom",
+      "benar" : "2"
+    },
+    {
+      "pertanyaan": "Film di bawah ini yang disutradarai oleh James Wan adalah ....",
+      "string1": "Insidious",
+      "string2": "Annabelle",
+      "string3": "Ju-On",
+      "string4": "Munafik",
+      "benar" : "1"
+    },
+    {
+      "pertanyaan": "Film KKN di Desa Penari (2022) diadaptasi dari kisah apa?",
+      "string1": "Fiksi dari Dee Lestari",
+      "string2": "Nyata dari Twitter",
+      "string3": "Legenda Jawa",
+      "string4": "Novel karya Ahmad Fuadi",
+      "benar" : "2"
+    },
+    {
+      "pertanyaan": "Film Jalan yang Jauh Jangan Lupa Pulang (2023) merupakan sekuel dari film apa?",
+      "string1": "Laskar Pelangi",
+      "string2": "Surat dari Praha",
+      "string3": "NKCTHI",
+      "string4": "AADC",
+      "benar" : "3"
+    },
+    {
+      "pertanyaan": "Yang bukan karakter dari film Big Hero 6 adalah..",
+      "string1": "Tadashi Hamada",
+      "string2": "Hiro",
+      "string3": "Fred",
+      "string4": "Kay",
+      "benar" : "4"
+    },
+    {
+      "pertanyaan": "Film animasi Disney apa yang mengeksplorasi hubungan keluarga Madriga",
+      "string1": "Turning Red",
+      "string2": "Encanto",
+      "string3": "Strange World",
+      "string4": "Sky Family",
+      "benar" : "2"
+    },
+    {
+      "pertanyaan": "Manakah film yang terburuk",
+      "string1": "Joker: Folie à Deux",
+      "string2": "Thor: The Dark World",
+      "string3": "Maleficent",
+      "string4": "The Amazing Spider-Man 2",
+      "benar" : "1"
+    },
+    {
+      "pertanyaan": "Film yang tidak disutradarai oleh Wes Anderson",
+      "string1": "The Grand Budapest Hotel",
+      "string2": "Moonrise Kingdom",
+      "string3": "Fantastic Mr. Fox",
+      "string4": "Home Alone",
+      "benar" : "4"
+    }
+  ]
+}

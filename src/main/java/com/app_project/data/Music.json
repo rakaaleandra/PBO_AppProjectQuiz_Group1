@@ -1,7 +1,7 @@
 {
     "array": [
         {
-            "pertanyaan": "Now there's drama (drama), found a club for that . Apa judul lagu dari lirik tersebut?",
+            "pertanyaan": "<html>Now there's drama (drama), found a club for that. <br>Apa judul lagu dari lirik tersebut?</html>",
             "string1": "Lowkey",
             "string2": "Every Summertime",
             "string3": "Oceans & Engines",
@@ -9,7 +9,7 @@
             "benar": 4
         },
         {
-            "pertanyaan": "Melihat tawamu~. Mendengar senandungmu~ . Judul lagunya adalah ...",
+            "pertanyaan": "<html>Melihat tawamu~. Mendengar senandungmu~. <br>Judul lagunya adalah ...</html>",
             "string1": "Anugerah Terindah",
             "string2": "Hari Bersamanya",
             "string3": "Anugrah Terindah yang Pernah Kumiliki",
@@ -17,7 +17,7 @@
             "benar": 3
         },
         {
-            "pertanyaan": "'Bangun pemudi pemuda Indonesia ...' Apa lanjutan lirik lagu ini??",
+            "pertanyaan": "<html>'Bangun pemudi pemuda Indonesia ...' <br>Apa lanjutan lirik lagu ini??</html>",
             "string1": "Lengan Bajumu Singkirkan untuk negara",
             "string2": "Tangan bajumu singkirkan untuk negara",
             "string3": "Lengan bajumu singsingkan untuk negara",
@@ -25,7 +25,7 @@
             "benar": 4
         },
         {
-            "pertanyaan": "Sambung lirik dari 'It's me, hi, i'm the problem, it's me...'",
+            "pertanyaan": "<html>Sambung lirik dari 'It's me, <br>hi, i'm the problem, it's me...'</html>",
             "string1": "My bad sign, everybody can see",
             "string2": "At tea time, everybody agrees",
             "string3": "At all times",
@@ -33,7 +33,7 @@
             "benar": 2
         },
         {
-            "pertanyaan": "Lagu 'Blue Bird' pada opening Naruto Shippuden dibawakan oleh ?",
+            "pertanyaan": "<html>Lagu 'Blue Bird' pada opening<br>Naruto Shippuden dibawakan oleh ?</html>",
             "string1": "Kana-Boon",
             "string2": "Ikimono Gakari",
             "string3": "Daisuke",
@@ -41,7 +41,7 @@
             "benar": 2
         },
         {
-            "pertanyaan": "Siapakah pencipta lagu legendaris Indonesia 'Bengawan Solo'?",
+            "pertanyaan": "<html>Siapakah pencipta lagu legendaris <br>Indonesia 'Bengawan Solo'?</html>",
             "string1": "Titiek Puspa",
             "string2": "Denny Caknan",
             "string3": "NDX",
@@ -49,7 +49,7 @@
             "benar": 4
         },
         {
-            "pertanyaan": "Potongan lirik yang benar dari hymne/mars UNS adalah..",
+            "pertanyaan": "<html>Potongan lirik yang benar dari <br>hymne/mars UNS adalah..</html>",
             "string1": "Rasa teguh dalam hati",
             "string2": "Diluhurkanlah namamu",
             "string3": "Untuk negeri tercinta",
@@ -57,7 +57,7 @@
             "benar": 2
         },
         {
-            "pertanyaan": "'And I swear that everyday you'll get better'. Judul lagu ini adalah",
+            "pertanyaan": "<html>'And I swear that everyday <br>you'll get better'. <br>Judul lagu ini adalah</html>",
             "string1": "I knew I Love You",
             "string2": "I Met You In The Dark",
             "string3": "Say You Won't Let Go",
@@ -65,7 +65,7 @@
             "benar": 3
         },
         {
-            "pertanyaan": "Siapa penyanyi lagu 'Jiwa yang Bersedih'?",
+            "pertanyaan": "<html>Siapa penyanyi lagu '<br>Jiwa yang Bersedih'?</html>",
             "string1": "Gea Indrawati",
             "string2": "Ghea Indrawari",
             "string3": "Gea Indrawari",
@@ -73,7 +73,7 @@
             "benar": 4
         },
         {
-            "pertanyaan": "'Tebak judul lagu indonesia (lirik diubah jadi bahasa inggris) Your eyes weaken me, When I first saw you, And honestly, I never felt, I've never felt this way.'",
+            "pertanyaan": "<html>'Tebak judul lagu indonesia (lirik diubah jadi bahasa inggris) <br>Your eyes weaken me, When I first saw you, And honestly, <br>I never felt, I've never felt this way.'</html>",
             "string1": "Mata ke Hati",
             "string2": "Cinta Luar Biasa",
             "string3": "Dari Mata",
@@ -81,7 +81,7 @@
             "benar": 3
         },
         {
-            "pertanyaan": "'Feel the rhythm getting louder, show the world what we can do' Siapa penyanyinya dan apa judulnya?",
+            "pertanyaan": "<html>'Feel the rhythm getting louder, <br>show the world what we can do' <br>Siapa penyanyinya dan apa judulnya?</html>",
             "string1": "Shakira – Waka Waka",
             "string2": "David Guetta ft. Usher – Without You",
             "string3": "K'naan – Wavin' Flag",
@@ -89,7 +89,7 @@
             "benar": 4
         },
         {
-            "pertanyaan": "'Belum ada satu bulan~' nama lengkap penyayi lagu dari potongan lirik tersebut adalah",
+            "pertanyaan": "<html>'Belum ada satu bulan~' nama lengkap penyayi <br>lagu dari potongan lirik tersebut adalah</html>",
             "string1": "Bernadya Ribka Jayakusuma",
             "string2": "Bernadya JayaKusuma",
             "string3": "Bernadya Kusumawati",
@@ -97,7 +97,7 @@
             "benar": 1
         },
         {
-            "pertanyaan": "'Tempat mencari segala kebutuhan, belanja puas dengan harga hemat'. Jingle dari minimarket mana ini?",
+            "pertanyaan": "<html>'Tempat mencari segala kebutuhan, <br>belanja puas dengan harga hemat'. <br>Jingle dari minimarket mana ini?</html>",
             "string1": "Alfamart",
             "string2": "Alfamidi",
             "string3": "Indomaret",
@@ -105,7 +105,7 @@
             "benar": 2
         },
         {
-            "pertanyaan": "'Nobody said it was easy' apa lanjutan lirik ini?",
+            "pertanyaan": "<html>'Nobody said it was easy' <br>apa lanjutan lirik ini?</html>",
             "string1": "It's such a shame for us to part",
             "string2": "But no one said it would be so hard",
             "string3": "I never thought I'd fall so far",
@@ -113,7 +113,7 @@
             "benar": 1
         },
         {
-            "pertanyaan": "'I used to rule the world, seas would rise when I gave the word' apa sambungan lirik tersebut?",
+            "pertanyaan": "<html>'I used to rule the world, <br>seas would rise when I gave the word' <br>apa sambungan lirik tersebut?</html>",
             "string1": "And all the battles I've ever known",
             "string2": "And I hold my breath in the throne",
             "string3": "Now in the morning I sleep alone",

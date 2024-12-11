@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
@@ -22,7 +23,8 @@ import com.formdev.flatlaf.themes.FlatMacDarkLaf;
 public class Menu implements ActionListener{
     //deklarasi attribute
     
-    JLabel frame;
+    JFrame frame;
+    JLabel framing;
     JPanel panelMain, paneltekateki, panelgambar;
     JLabel title;
     JButton tekateki, gambar, categori;
@@ -31,7 +33,7 @@ public class Menu implements ActionListener{
     Data data;
     // Export export;
     
-    Menu(JLabel frame){
+    Menu(JFrame frame, JLabel framing){
         this.data = new Data();
         // buffing.pengisian();
         // export = new Export();
@@ -41,6 +43,7 @@ public class Menu implements ActionListener{
             UIManager.setLookAndFeel(new FlatMacDarkLaf());
             SwingUtilities.invokeLater(()->{
                 this.frame = frame;
+                this.framing = framing;
                 //memberi object pada attribute
                 panelMain = new JPanel(new GridLayout(1,2,100,100));
                 paneltekateki = new JPanel(new BorderLayout());
@@ -111,8 +114,8 @@ public class Menu implements ActionListener{
                 gambar.setOpaque(false);
                 
                 //memasukan panel pada frame
-                this.frame.add(title, BorderLayout.NORTH);
-                this.frame.add(panelMain, BorderLayout.CENTER);
+                this.framing.add(title, BorderLayout.NORTH);
+                this.framing.add(panelMain, BorderLayout.CENTER);
                 // frame.add(kosong.get(0), BorderLayout.WEST);
             });
             
@@ -124,7 +127,7 @@ public class Menu implements ActionListener{
     }
     
     void image(){
-        gambar1 = new ImageIcon("src/main/resources/apalah.jpg");
+        gambar1 = new ImageIcon("src/main/resources/menutekateki.png");
         gambar2 = new ImageIcon("src/main/resources/pngaaa.com-5340319.png");
         
         Image temp1 = gambar1.getImage();
@@ -140,13 +143,13 @@ public class Menu implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e){
         if (e.getSource() == tekateki) {
-            frame.remove(panelMain);
-            Quiztekateki quiz = new Quiztekateki(frame, data.getData());
+            framing.remove(panelMain);
+            Quiztekateki quiz = new Quiztekateki(frame, framing, data.getData());
             frame.setVisible(true);
         }
         else if (e.getSource() == gambar){
-            frame.remove(panelMain);
-            Quizgambar quiz = new Quizgambar(frame, data.getDataGambar());
+            framing.remove(panelMain);
+            Quizgambar quiz = new Quizgambar(frame, framing, data.getDataGambar());
             frame.setVisible(true);
         }
     }
