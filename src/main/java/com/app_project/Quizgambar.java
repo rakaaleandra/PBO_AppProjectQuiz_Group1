@@ -156,7 +156,6 @@ public final class Quizgambar implements ActionListener{
                 JOptionPane.showMessageDialog(frame, "Time Over! Anda akan keluar program.", "Time Over", JOptionPane.WARNING_MESSAGE);      
                     System.exit(0);
             }
-            System.out.println("submit");
         }
     }
 

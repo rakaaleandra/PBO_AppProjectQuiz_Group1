@@ -4,22 +4,57 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Random;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 public final class Data {
     ArrayList<question> dataListTeka = new ArrayList<>();
+    ArrayList<picture> dataListGambarFix = new ArrayList<>();
     ArrayList<picture> dataListGambar = new ArrayList<>();
     ArrayList<ArrayList<question>> category = new ArrayList<>();
     ArrayList<question> section;
+    HashSet<question> used1 = new HashSet<>();
+    HashSet<picture> used2 = new HashSet<>();
+    picture spesial = new picture();
 
     Data(){
+        Random rand = new Random();
+
         pengisianTekaTeki("src/main/java/com/app_project/data/Music.json");
+        pengisianTekaTeki("src/main/java/com/app_project/data/Informatika.json");
         pengisianGambar("src/main/java/com/app_project/data/Gambar.json");
-        dataListTeka = category.get(0);
+
+        for (int i = 0; i < 15; ++i) {
+            question temp;
+            for (;;) {
+                temp = category.get(rand.nextInt(category.size())).get(rand.nextInt(15));
+                if (!used1.contains(temp)) {
+                    used1.add(temp);
+                    break;
+                }
+            }
+            dataListTeka.add(temp);
+        }
+        // dataListTeka = category.get(1);
+        for (int i = 0; i < 9; i++) {
+            picture temp;
+            for (;;) {
+                temp = dataListGambar.get(rand.nextInt(dataListGambar.size()));
+                if (!used2.contains(temp)) {
+                    used2.add(temp);
+                    break;
+                }
+            }
+            dataListGambarFix.add(temp);
+        }
+        spesial.link = "src/main/resources/TekaTekiGambar/10 Pertanyaan/DosenAwal.png";
+        spesial.answerRight = "Afrizal";
+        dataListGambarFix.add(spesial);
     }
-    
+
     public void pengisianTekaTeki(String Link){
         section = new ArrayList<>();
         question temp;
@@ -88,7 +123,7 @@ public final class Data {
     }
 
     public ArrayList<picture> getDataGambar(){
-        return dataListGambar;
+        return dataListGambarFix;
     }
 
     public class question{
