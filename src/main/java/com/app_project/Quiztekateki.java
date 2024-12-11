@@ -8,7 +8,6 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-// import java.util.Timer;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -64,7 +63,7 @@ public final class Quiztekateki implements ActionListener{
             kosong2.add(new JPanel());
             kosong3.add(new JPanel());
             kosong1.get(i).setPreferredSize(new Dimension(10,10));
-            kosong2.get(i).setPreferredSize(new Dimension(10,10));
+            kosong2.get(i).setPreferredSize(new Dimension(60,60));
             kosong3.get(i).setPreferredSize(new Dimension(10,10));
             kosong1.get(i).setBackground(new Color(25,25,57,255));
             kosong2.get(i).setBackground(new Color(25,25,57,255));
@@ -110,15 +109,23 @@ public final class Quiztekateki implements ActionListener{
 
         //kalau data manual
         answer.add(new JButton(data.get(currentStage).jawaban1));
+        answer.get(0).setBackground(Color.WHITE);
+        answer.get(0).setForeground(Color.BLACK);
         answer.get(0).addActionListener(this);
         inJawaban.add(answer.get(0));
         answer.add(new JButton(data.get(currentStage).jawaban2));
+        answer.get(1).setBackground(Color.WHITE);
+        answer.get(1).setForeground(Color.BLACK);
         answer.get(1).addActionListener(this);
         inJawaban.add(answer.get(1));
         answer.add(new JButton(data.get(currentStage).jawaban3));
+        answer.get(2).setBackground(Color.WHITE);
+        answer.get(2).setForeground(Color.BLACK);
         answer.get(2).addActionListener(this);
         inJawaban.add(answer.get(2));
         answer.add(new JButton(data.get(currentStage).jawaban4));
+        answer.get(3).setBackground(Color.WHITE);
+        answer.get(3).setForeground(Color.BLACK);
         answer.get(3).addActionListener(this);
         inJawaban.add(answer.get(3));
 
@@ -159,7 +166,8 @@ public final class Quiztekateki implements ActionListener{
                 // this.frame.remove(panelMain);
                 // this.frame.add(paneling, BorderLayout.CENTER);
                 // this.frame.setVisible(true);
-                JOptionPane.showMessageDialog(frame, "Time Over! Anda akan keluar program.", "Time Over", JOptionPane.WARNING_MESSAGE);      
+                time.berhenti();
+                JOptionPane.showMessageDialog(frame, "Game Over! Jawabanmu Salah.", "Game Over", JOptionPane.WARNING_MESSAGE);      
                     System.exit(0);
                 // time.interrupt();
             }
@@ -181,7 +189,8 @@ public final class Quiztekateki implements ActionListener{
                 // this.frame.remove(panelMain);
                 // this.frame.add(paneling, BorderLayout.CENTER);
                 // this.frame.setVisible(true);
-                JOptionPane.showMessageDialog(frame, "Time Over! Anda akan keluar program.", "Time Over", JOptionPane.WARNING_MESSAGE);      
+                time.berhenti();
+                JOptionPane.showMessageDialog(frame, "Game Over! Jawabanmu Salah.", "Game Over", JOptionPane.WARNING_MESSAGE);      
                     System.exit(0);
                 // time.interrupt();
             }
@@ -203,7 +212,8 @@ public final class Quiztekateki implements ActionListener{
                 // this.frame.remove(panelMain);
                 // this.frame.add(paneling, BorderLayout.CENTER);
                 // this.frame.setVisible(true);
-                JOptionPane.showMessageDialog(frame, "Time Over! Anda akan keluar program.", "Time Over", JOptionPane.WARNING_MESSAGE);      
+                time.berhenti();
+                JOptionPane.showMessageDialog(frame, "Game Over! Jawabanmu Salah.", "Game Over", JOptionPane.WARNING_MESSAGE);      
                     System.exit(0);
                 // time.interrupt();
             }
@@ -229,7 +239,8 @@ public final class Quiztekateki implements ActionListener{
                 // this.frame.remove(panelMain);
                 // this.frame.add(paneling, BorderLayout.CENTER);
                 // this.frame.setVisible(true);
-                JOptionPane.showMessageDialog(frame, "Time Over! Anda akan keluar program.", "Time Over", JOptionPane.WARNING_MESSAGE);      
+                time.berhenti();
+                JOptionPane.showMessageDialog(frame, "Game Over! Jawabanmu Salah.", "Game Over", JOptionPane.WARNING_MESSAGE);      
                     System.exit(0);
                 // time.interrupt();
             }
@@ -237,6 +248,7 @@ public final class Quiztekateki implements ActionListener{
     }
 
     public void levelUp(){
+        time.berhenti();
         ++currentStage;
         if(currentStage < 15){
             // rehat();
@@ -298,6 +310,12 @@ public final class Quiztekateki implements ActionListener{
 
         }
 
+        public void berhenti(){
+            timer.stop();
+        }
+
+        //produk gagal
+        /*
         public void run(){
             // TimerTask task = new TimerTask() {
             //     @Override
@@ -334,5 +352,6 @@ public final class Quiztekateki implements ActionListener{
         //     isCancelled = true;
         //     System.out.println("Gagal");
         // }
+        */
     }
 }
