@@ -25,7 +25,7 @@ public final class Quiztekateki implements ActionListener{
     ArrayList<JButton> answer;
     JLabel question;
     JFrame frame;
-    waktu time;
+    // waktu time;
     int currentStage = 0;
     ArrayList<question> data;
 

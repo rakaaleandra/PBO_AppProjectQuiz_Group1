@@ -3,6 +3,7 @@ package com.app_project;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,10 +13,13 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class Quizgambar implements ActionListener{
+import com.app_project.Data.picture;
+
+public final class Quizgambar implements ActionListener{
     JPanel panelMain, stage, jawaban, pertanyaan, pov;
     ArrayList<JPanel> kosong1, kosong2, kosong3;
     JPanel inStage, inJawaban, inPertanyaan, povJawaban;
@@ -23,16 +27,25 @@ public class Quizgambar implements ActionListener{
     JTextField answer;
     JButton submit;
     ImageIcon question;
+    JLabel questionLabel;
     JButton hint;
     int currentStage = 0, hintCapacity = 0;
+    JFrame frame;
+    ArrayList<picture> data;
 
-    Quizgambar(JFrame frame){
+    Quizgambar(JFrame frame, ArrayList<picture> data){
+        this.frame = frame;
+        this.data = data;
+        framing();
+    }
+
+    public void framing() {
         panelMain = new JPanel(new BorderLayout(10,10));
         kosong1 = new ArrayList<>();
         kosong2 = new ArrayList<>();
         kosong3 = new ArrayList<>();
         level = new ArrayList<>();
-        answer = new JTextField("Input");
+        answer = new JTextField();
         submit = new JButton("Submit");
 
         stage = new JPanel(new BorderLayout());
@@ -102,18 +115,19 @@ public class Quizgambar implements ActionListener{
         jawaban.add(povJawaban, BorderLayout.CENTER);
 
         inPertanyaan = new JPanel();
-        question = new ImageIcon("src/main/resources/apalah.jpg");
-        inPertanyaan.add(question);
+        question = new ImageIcon(data.get(currentStage).link);
+        questionLabel = new JLabel(question);
+        inPertanyaan.add(questionLabel);
         pertanyaan.add(inPertanyaan, BorderLayout.CENTER);
 
         panelMain.add(pov, BorderLayout.CENTER);
         panelMain.add(stage, BorderLayout.EAST);
         panelMain.setBackground(new Color(12,20,68,255));
 
-        frame.add(panelMain);
-        frame.setVisible(true);
-
+        this.frame.add(panelMain);
+        this.frame.setVisible(true);
     }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == hint) {
@@ -122,7 +136,33 @@ public class Quizgambar implements ActionListener{
         }
         else if (e.getSource() == submit) {
             String jawab = answer.getText();
+            if (jawab.equals(data.get(currentStage).answerRight)) {
+                if (currentStage == 10) {
+                    JPanel paneling = new JPanel();
+                    JLabel label = new JLabel("Selamat Anda Berhasil");
+                    label.setForeground(Color.WHITE);
+                    label.setFont(new Font("Arial", Font.BOLD, 20));
+                    paneling.setBackground(Color.BLACK);
+                    paneling.add(label);
+                    this.frame.remove(panelMain);
+                    this.frame.add(paneling, BorderLayout.CENTER);
+                    this.frame.setVisible(true);
+                }
+                else if (currentStage < 10){
+                    levelUp();
+                }
+            }
+            else {
+                JOptionPane.showMessageDialog(frame, "Time Over! Anda akan keluar program.", "Time Over", JOptionPane.WARNING_MESSAGE);      
+                    System.exit(0);
+            }
             System.out.println("submit");
         }
+    }
+
+    public void levelUp(){
+        ++currentStage;
+        this.frame.remove(panelMain);
+        framing();
     }
 }
