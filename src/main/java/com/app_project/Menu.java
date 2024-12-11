@@ -143,7 +143,7 @@ public class Menu implements ActionListener{
         else if (e.getSource() == gambar){
             System.out.println("konci");
             frame.remove(panelMain);
-            Quizgambar quiz = new Quizgambar(frame);
+            Quizgambar quiz = new Quizgambar(frame, data.getDataGambar());
         }
     }
 

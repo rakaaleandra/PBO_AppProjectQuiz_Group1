@@ -16,6 +16,7 @@ public final class Data {
 
     Data(){
         pengisianTekaTeki("src/main/java/com/app_project/data/Music.json");
+        pengisianGambar("src/main/java/com/app_project/data/Gambar.json");
         dataListTeka = category.get(0);
     }
     
@@ -72,15 +73,10 @@ public final class Data {
             }
 
             //tester
-            // for (int i = 0; i < section.size(); i++) {
-            //     System.out.println(section.get(i).pertanyaan);                
-            //     System.out.println(section.get(i).jawaban1);                
-            //     System.out.println(section.get(i).jawaban2);                
-            //     System.out.println(section.get(i).jawaban3);                
-            //     System.out.println(section.get(i).jawaban4);                
-            //     System.out.println(section.get(i).benar);                
+            // for (int i = 0; i < dataListGambar.size(); i++) {
+            //     System.out.println(dataListGambar.get(i).link);
+            //     System.out.println(dataListGambar.get(i).answerRight);      
             // }
-            category.add(section);
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
@@ -89,6 +85,10 @@ public final class Data {
 
     public ArrayList<question> getData(){
         return dataListTeka;
+    }
+
+    public ArrayList<picture> getDataGambar(){
+        return dataListGambar;
     }
 
     public class question{

@@ -1,0 +1,43 @@
+{
+    "array": [
+        {
+            "gambar": "src/main/resources/TekaTekiGambar/1-9/CristianoRonaldo.png",
+            "benar": "Cristiano Ronaldo"
+        },
+        {
+            "gambar": "src/main/resources/TekaTekiGambar/1-9/JeonJungkook.png",
+            "benar": "Jungkook"
+        },
+        {
+            "gambar": "src/main/resources/TekaTekiGambar/1-9/RanoKarno.png",
+            "benar": "Rano Karno"
+        },{
+            "gambar": "src/main/resources/TekaTekiGambar/1-9/LionelMessi.png",
+            "benar": "Lionel Messi"
+        },
+        {
+            "gambar": "src/main/resources/TekaTekiGambar/1-9/Hajime Isayama",
+            "benar": "Hajime Isayama"
+        },
+        {
+            "gambar": "src/main/resources/TekaTekiGambar/1-9/BaskaraPutra",
+            "benar": "Baskara Putra"
+        },
+        {
+            "gambar": "src/main/resources/TekaTekiGambar/1-9/SteveJobs.png",
+            "benar": "Steve Jobs"
+        },
+        {
+            "gambar": "src/main/resources/TekaTekiGambar/1-9/LarryPage.png",
+            "benar": "Larry Page"
+        },
+        {
+            "gambar": "src/main/resources/TekaTekiGambar/1-9/AlanTuring.png",
+            "benar": "Alan Turing"
+        },
+        {
+            "gambar": "src/main/resources/TekaTekiGambar/1-9/PeterChen.png",
+            "benar": "Peter Chen"
+        }
+    ]
+}
