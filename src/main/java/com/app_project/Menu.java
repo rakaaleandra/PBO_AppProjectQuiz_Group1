@@ -106,8 +106,8 @@ public class Menu implements ActionListener{
                 gambar.addActionListener(this);
                 
                 //memasukan panel pada frame
-                frame.add(title, BorderLayout.NORTH);
-                frame.add(panelMain, BorderLayout.CENTER);
+                this.frame.add(title, BorderLayout.NORTH);
+                this.frame.add(panelMain, BorderLayout.CENTER);
                 // frame.add(kosong.get(0), BorderLayout.WEST);
             });
             
@@ -138,6 +138,7 @@ public class Menu implements ActionListener{
             System.out.println("klik");
             frame.remove(panelMain);
             Quiztekateki quiz = new Quiztekateki(frame, data.getData());
+            frame.setVisible(true);
         }
         else if (e.getSource() == gambar){
             System.out.println("konci");

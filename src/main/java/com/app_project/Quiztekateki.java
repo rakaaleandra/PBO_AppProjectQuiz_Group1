@@ -3,6 +3,7 @@ package com.app_project;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,6 +12,7 @@ import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import com.app_project.Data.question;
@@ -22,14 +24,14 @@ public final class Quiztekateki implements ActionListener{
     ArrayList<JLabel> level;
     ArrayList<JButton> answer;
     JLabel question;
-    static JFrame frame;
+    JFrame frame;
     waktu time;
     int currentStage = 0;
     ArrayList<question> data;
 
     Quiztekateki(JFrame frame, ArrayList<question> data){
         this.data = data;
-        Quiztekateki.frame = frame;
+        this.frame = frame;
         framing();
     }
 
@@ -85,6 +87,11 @@ public final class Quiztekateki implements ActionListener{
                 level.add(new JLabel("Level " + (i+1)));
                 level.get(i).setForeground(Color.WHITE);
                 inStage.add(level.get(i));
+                if (level.size() == currentStage+1) {
+                    level.get(i).setBackground(Color.WHITE);
+                    level.get(i).setForeground(Color.BLACK);
+                    level.get(i).setOpaque(true);
+                }
             }
             stage.add(inStage, BorderLayout.CENTER);
         } catch (Exception e) {
@@ -116,7 +123,7 @@ public final class Quiztekateki implements ActionListener{
         jawaban.add(inJawaban, BorderLayout.CENTER);
 
         inPertanyaan = new JPanel();
-        question = new JLabel("pertanyaan");
+        question = new JLabel(data.get(currentStage).pertanyaan);
         inPertanyaan.add(question);
         pertanyaan.add(inPertanyaan, BorderLayout.CENTER);
 
@@ -124,10 +131,10 @@ public final class Quiztekateki implements ActionListener{
         panelMain.add(stage, BorderLayout.WEST);
         panelMain.setBackground(new Color(12,20,68,255));
 
-        frame.add(panelMain);
-        frame.setVisible(true);
-        time = new waktu();
-        time.start();
+        this.frame.add(panelMain);
+        this.frame.setVisible(true);
+        // this.time = new waktu();
+        // this.time.start();
     }
 
     @Override
@@ -135,86 +142,183 @@ public final class Quiztekateki implements ActionListener{
         if (e.getSource() == answer.get(0)) {
             if (data.get(currentStage).benar == 1) {
                 levelUp();
-                time.interrupt();
+                // time.interrupt();
+                // time.cancelTimer();
                 // time.start();
             }
             else{
-                JPanel paneling = new JPanel();
-                paneling.setBackground(Color.BLACK);
-                System.out.println("dontol");
-                time.interrupt();
+                // JPanel paneling = new JPanel();
+                // JLabel label = new JLabel("Selamat Anda Salah");
+                // label.setForeground(Color.WHITE);
+                // label.setFont(new Font("Arial", Font.BOLD, 20));
+                // paneling.setBackground(Color.BLACK);
+                // paneling.add(label);
+                // this.frame.remove(panelMain);
+                // this.frame.add(paneling, BorderLayout.CENTER);
+                // this.frame.setVisible(true);
+                JOptionPane.showMessageDialog(frame, "Time Over! Anda akan keluar program.", "Time Over", JOptionPane.WARNING_MESSAGE);      
+                    System.exit(0);
+                // time.interrupt();
             }
         }
         if (e.getSource() == answer.get(1)) {
             if (data.get(currentStage).benar == 2) {
                 levelUp();
-                time.interrupt();
+                // time.interrupt();
+                // time.cancelTimer();
                 // time.start();
             }
             else{
-                JPanel paneling = new JPanel();
-                paneling.setBackground(Color.BLACK);
-                System.out.println("dontol");
-                time.interrupt();
+                // JPanel paneling = new JPanel();
+                // JLabel label = new JLabel("Selamat Anda Salah");
+                // label.setForeground(Color.WHITE);
+                // label.setFont(new Font("Arial", Font.BOLD, 20));
+                // paneling.setBackground(Color.BLACK);
+                // paneling.add(label);
+                // this.frame.remove(panelMain);
+                // this.frame.add(paneling, BorderLayout.CENTER);
+                // this.frame.setVisible(true);
+                JOptionPane.showMessageDialog(frame, "Time Over! Anda akan keluar program.", "Time Over", JOptionPane.WARNING_MESSAGE);      
+                    System.exit(0);
+                // time.interrupt();
             }
         }
         if (e.getSource() == answer.get(2)) {
             if (data.get(currentStage).benar == 3) {
                 levelUp();
-                time.interrupt();
+                // time.interrupt();
+                // time.cancelTimer();
                 // time.start();
             }
             else{
-                JPanel paneling = new JPanel();
-                paneling.setBackground(Color.BLACK);
-                System.out.println("dontol");
-                time.interrupt();
+                // JPanel paneling = new JPanel();
+                // JLabel label = new JLabel("Selamat Anda Salah");
+                // label.setForeground(Color.WHITE);
+                // label.setFont(new Font("Arial", Font.BOLD, 20));
+                // paneling.setBackground(Color.BLACK);
+                // paneling.add(label);
+                // this.frame.remove(panelMain);
+                // this.frame.add(paneling, BorderLayout.CENTER);
+                // this.frame.setVisible(true);
+                JOptionPane.showMessageDialog(frame, "Time Over! Anda akan keluar program.", "Time Over", JOptionPane.WARNING_MESSAGE);      
+                    System.exit(0);
+                // time.interrupt();
             }
         }
         if (e.getSource() == answer.get(3)) {
             if (data.get(currentStage).benar == 4) {
                 levelUp();
-                time.interrupt();
-                // time.start();
+                // time.setStopFlag(true); 
+                // try {
+                //     time.interrupt();
+                //     time.join();
+                // } catch (InterruptedException e1) {
+                //     e1.getMessage();
+                // }
             }
             else{
-                JPanel paneling = new JPanel();
-                paneling.setBackground(Color.BLACK);
-                System.out.println("dontol");
-                time.interrupt();
+                // JPanel paneling = new JPanel();
+                // JLabel label = new JLabel("Selamat Anda Salah");
+                // label.setForeground(Color.WHITE);
+                // label.setFont(new Font("Arial", Font.BOLD, 20));
+                // paneling.setBackground(Color.BLACK);
+                // paneling.add(label);
+                // this.frame.remove(panelMain);
+                // this.frame.add(paneling, BorderLayout.CENTER);
+                // this.frame.setVisible(true);
+                JOptionPane.showMessageDialog(frame, "Time Over! Anda akan keluar program.", "Time Over", JOptionPane.WARNING_MESSAGE);      
+                    System.exit(0);
+                // time.interrupt();
             }
         }
     }
 
     public void levelUp(){
         ++currentStage;
-        // answer.set(0, new JButton(data.get(currentStage).jawaban1));
-        // answer.set(1, new JButton(data.get(currentStage).jawaban2));
-        // answer.set(2, new JButton(data.get(currentStage).jawaban3));
-        // answer.set(3, new JButton(data.get(currentStage).jawaban4));
-        frame.remove(panelMain);
-        framing();
+        if(currentStage < 15){
+            // rehat();
+            this.frame.remove(panelMain);
+            framing();
+        }
+        else if (currentStage == 15) {
+            JPanel paneling = new JPanel();
+            JLabel label = new JLabel("Selamat Anda Berhasil");
+            label.setForeground(Color.WHITE);
+            label.setFont(new Font("Arial", Font.BOLD, 20));
+            paneling.setBackground(Color.BLACK);
+            paneling.add(label);
+            this.frame.remove(panelMain);
+            this.frame.add(paneling, BorderLayout.CENTER);
+            this.frame.setVisible(true);
+        }
+    }
+
+    public void rehat(){
+        // JPanel paneling = new JPanel();
+        // JLabel label = new JLabel("Jawaban Anda Benar");
+        // label.setForeground(Color.WHITE);
+        // label.setFont(new Font("Arial", Font.BOLD, 20));
+        // paneling.setBackground(Color.BLACK);
+        // paneling.add(label);
+        // this.frame.remove(panelMain);
+        // this.frame.add(paneling, BorderLayout.CENTER);
+        // this.frame.setVisible(true);
+        System.out.println("Jawaban Anda Benar");
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public class waktu extends Thread{
+        // Timer timer;
+        // boolean isCancelled = false;
+        // long duration;
+
+        // public waktu(long duration) {
+        //     this.duration = duration;
+        //     this.timer = new Timer();
+        // }
+
         @Override
         public void run(){
-            
-            JPanel paneling = new JPanel();
-            paneling.setBackground(Color.BLACK);
-            try {
-                for (int i = 0; i < 10; i++) {
-                    System.out.println(i);
+            // TimerTask task = new TimerTask() {
+            //     @Override
+            //     public void run() {
+            //         if (!isCancelled) {
+            //             System.out.println("Berhasil");
+            //             JPanel paneling = new JPanel();
+            //             paneling.setBackground(Color.BLACK);
+            //             frame.remove(panelMain);
+            //             frame.add(paneling);
+            //             frame.setVisible(true);
+            //         }
+            //     }
+            // };
+            // timer.schedule(task, duration);
+            for (int i = 1; i <= 10; i++) {
+                // if (isCancelled) {
+                //     break;
+                // }
+                System.out.println(i);
+                try {
                     Thread.sleep(1000);
-                    if (i == 9) {
+                    if (i == 10) {
+                        JPanel paneling = new JPanel();
+                        paneling.setBackground(Color.BLACK);
                         frame.remove(panelMain);
                         frame.add(paneling);
                         frame.setVisible(true);
                     }
+                } catch (InterruptedException e) {
+                    System.out.println(e.getMessage());
                 }
-            } catch (InterruptedException e) {
-                System.out.println(e.getMessage());
             }
         }
+        // public void cancelTimer() {
+        //     isCancelled = true;
+        //     System.out.println("Gagal");
+        // }
     }
 }
