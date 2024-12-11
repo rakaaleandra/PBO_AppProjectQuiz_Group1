@@ -1,0 +1,124 @@
+{
+    "array": [
+        {
+            "pertanyaan": "Tipe data integer berbilangan?",
+            "string1": "Asli",
+            "string2": "Cacah",
+            "string3": "Bulat",
+            "string4": "Pecahan",
+            "benar": 3
+        },
+        {
+            "pertanyaan": "Apa kepanjangan dari UI?",
+            "string1": "Unit Interface",
+            "string2": "User Interface",
+            "string3": "User Integrated",
+            "string4": "Unit Integrated",
+            "benar": 2
+        },
+        {
+            "pertanyaan": "Apa perangkat keras yang berfungsi sebagai otak dari komputer?",
+            "string1": "CPU",
+            "string2": "GPU",
+            "string3": "QPU",
+            "string4": "VPU",
+            "benar": 1
+        },
+        {
+            "pertanyaan": "Mana yang bukan mickrokontroler?",
+            "string1": "Arduino",
+            "string2": "ESP",
+            "string3": "Raspberry Pi",
+            "string4": "DHT",
+            "benar": 4
+        },
+        {
+            "pertanyaan": "Apa Tahap keempat dari Design Thinking?",
+            "string1": "Prototype",
+            "string2": "Ideate",
+            "string3": "Test",
+            "string4": "Define",
+            "benar": 1
+        },
+        {
+            "pertanyaan": "Apa kepanjangan dari RAM?",
+            "string1": "Read Analog Memory",
+            "string2": "Random Access Memory",
+            "string3": "Read Analog Memristor",
+            "string4": "Random Access Memristor",
+            "benar": 2
+        },
+        {
+            "pertanyaan": "Apa kepanjangan dari ROM?",
+            "string1": "Read Only Memory",
+            "string2": "Random Open Memory",
+            "string3": "Read Only Memristor",
+            "string4": "Read Open Memristor",
+            "benar": 1
+        },
+        {
+            "pertanyaan": "Mana yang bahasa pemrograman?",
+            "string1": "JavaScript",
+            "string2": "Laravel",
+            "string3": "Flutter",
+            "string4": "HTML",
+            "benar": 1
+        },
+        {
+            "pertanyaan": "Mana yang bukan sistem operasi?",
+            "string1": "Linux",
+            "string2": "Microsoft",
+            "string3": "Solaris",
+            "string4": "TIBCO",
+            "benar": 4
+        },
+        {
+            "pertanyaan": "Apa kepanjangan dari SSD?",
+            "string1": "Secure Shell Disk",
+            "string2": "Solid State Disk",
+            "string3": "Secure Shell Drive",
+            "string4": "Solid State Drive",
+            "benar": 4
+        },
+        {
+            "pertanyaan": "Mana DBMS yang bukan SQL?",
+            "string1": "Azure Databrick",
+            "string2": "Cache",
+            "string3": "ClickHouse",
+            "string4": "MongoDB",
+            "benar": 4
+        },
+        {
+            "pertanyaan": "Apa bahasa pemrograman pertama kali ada?",
+            "string1": "BASIC",
+            "string2": "COBOL",
+            "string3": "FORTRAN",
+            "string4": "PASCAL",
+            "benar": 3
+        },
+        {
+            "pertanyaan": "Mana yang digunakan untuk membatasi baris dalam kueri SQL Server?",
+            "string1": "HOLD",
+            "string2": "LIMIT",
+            "string3": "MAX",
+            "string4": "TOP",
+            "benar": 4
+        },
+        {
+            "pertanyaan": "Apa kepanjangan dari DNS?",
+            "string1": "Direct Name Secure",
+            "string2": "Direct Number System",
+            "string3": "Domain Name System",
+            "string4": "Domain Number Secure",
+            "benar": 3
+        },
+        {
+            "pertanyaan": "Metode HTTP apa yang digunakan untuk memperbarui data?",
+            "string1": "GET",
+            "string2": "POST",
+            "string3": "PUT",
+            "string4": "DELETE",
+            "benar": 3
+        }
+    ]
+}

@@ -38,6 +38,8 @@ public class Main {
     public static void main(String[] args) {
         awalan();
 
+        // Container container = frame.getContentPane();
+
         Menu menu = new Menu(frame);
         
         akhiran();
