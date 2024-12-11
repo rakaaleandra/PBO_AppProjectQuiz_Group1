@@ -57,6 +57,7 @@ public class Menu implements ActionListener{
                     kosong.add(new JPanel());
                     kosong.get(i).setBackground(new Color(12,20,68,255));
                     kosong.get(i).setPreferredSize(new Dimension(100,100));
+                    kosong.get(i).setOpaque(false);
                 }
         
                 //mamasukkan gambar dan memanipulasi ukuran gambar
@@ -77,14 +78,17 @@ public class Menu implements ActionListener{
                 paneltekateki.add(kosong.get(1), BorderLayout.EAST);
                 paneltekateki.add(kosong.get(2), BorderLayout.SOUTH);
                 paneltekateki.add(kosong.get(3), BorderLayout.WEST);
+                paneltekateki.setOpaque(false);
                 paneltekateki.add(tekateki, BorderLayout.CENTER);
                 
                 panelgambar.add(kosong.get(4), BorderLayout.NORTH);
                 panelgambar.add(kosong.get(5), BorderLayout.WEST);
                 panelgambar.add(kosong.get(6), BorderLayout.SOUTH);
                 panelgambar.add(kosong.get(7), BorderLayout.EAST);
+                panelgambar.setOpaque(false);
                 panelgambar.add(gambar, BorderLayout.CENTER);
         
+                panelMain.setOpaque(false);
                 panelMain.add(paneltekateki);
                 panelMain.add(panelgambar);
                 
@@ -97,13 +101,15 @@ public class Menu implements ActionListener{
                 title.setForeground(Color.WHITE);
                 title.setPreferredSize(new Dimension(50,50));
                 title.setBackground(new Color(12,20,68,255));
-                title.setOpaque(true);
+                title.setOpaque(false);
         
                 //button action
                 tekateki.setFocusable(false);
-                gambar.setFocusable(false);
                 tekateki.addActionListener(this);
+                tekateki.setOpaque(false);
+                gambar.setFocusable(false);
                 gambar.addActionListener(this);
+                gambar.setOpaque(false);
                 
                 //memasukan panel pada frame
                 this.frame.add(title, BorderLayout.NORTH);
@@ -120,7 +126,7 @@ public class Menu implements ActionListener{
     
     void image(){
         gambar1 = new ImageIcon("src/main/resources/apalah.jpg");
-        gambar2 = new ImageIcon("src/main/resources/apalah.jpg");
+        gambar2 = new ImageIcon("src/main/resources/pngaaa.com-5340319.png");
         
         Image temp1 = gambar1.getImage();
         Image temp2 = gambar2.getImage();

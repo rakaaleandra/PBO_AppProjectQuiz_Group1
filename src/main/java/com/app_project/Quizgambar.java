@@ -108,6 +108,7 @@ public final class Quizgambar implements ActionListener{
         hint.addActionListener(this);
         submit.addActionListener(this);
         inJawaban = new JPanel(new BorderLayout());
+        answer.addActionListener(this);
         inJawaban.add(answer, BorderLayout.CENTER);
         inJawaban.add(submit, BorderLayout.EAST);
         povJawaban.add(hint, BorderLayout.EAST);
@@ -134,7 +135,7 @@ public final class Quizgambar implements ActionListener{
             --hintCapacity;
             System.out.println("hint");
         }
-        else if (e.getSource() == submit) {
+        else if (e.getSource() == submit || e.getSource() == submit) {
             String jawab = answer.getText();
             if (jawab.equals(data.get(currentStage).answerRight)) {
                 if (currentStage == 10) {
