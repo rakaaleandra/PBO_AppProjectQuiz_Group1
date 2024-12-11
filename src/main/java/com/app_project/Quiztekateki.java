@@ -8,12 +8,14 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+// import java.util.Timer;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.Timer;
 
 import com.app_project.Data.question;
 
@@ -25,7 +27,7 @@ public final class Quiztekateki implements ActionListener{
     ArrayList<JButton> answer;
     JLabel question;
     JFrame frame;
-    // waktu time;
+    waktu time;
     int currentStage = 0;
     ArrayList<question> data;
 
@@ -133,6 +135,7 @@ public final class Quiztekateki implements ActionListener{
 
         this.frame.add(panelMain);
         this.frame.setVisible(true);
+        time = new waktu();
         // this.time = new waktu();
         // this.time.start();
     }
@@ -271,17 +274,30 @@ public final class Quiztekateki implements ActionListener{
         }
     }
 
-    public class waktu extends Thread{
-        // Timer timer;
-        // boolean isCancelled = false;
-        // long duration;
+    public class waktu{
+        Timer timer;
+        int duration = 0;
 
-        // public waktu(long duration) {
-        //     this.duration = duration;
-        //     this.timer = new Timer();
-        // }
+        waktu(){
+            timer = new Timer(1000, e -> update());
+            timer.start();
+        }
 
-        @Override
+        public void update(){
+            duration++;
+            System.out.println(duration);
+
+            if (duration == 10) {
+                JPanel paneling = new JPanel();
+                paneling.setBackground(Color.BLACK);
+                frame.remove(panelMain);
+                frame.add(paneling);
+                frame.setVisible(true);
+                timer.stop();
+            }
+
+        }
+
         public void run(){
             // TimerTask task = new TimerTask() {
             //     @Override
@@ -297,14 +313,12 @@ public final class Quiztekateki implements ActionListener{
             //     }
             // };
             // timer.schedule(task, duration);
-            for (int i = 1; i <= 10; i++) {
-                // if (isCancelled) {
-                //     break;
-                // }
-                System.out.println(i);
+            
+
                 try {
                     Thread.sleep(1000);
-                    if (i == 10) {
+                    duration++;
+                    if (i == 9) {
                         JPanel paneling = new JPanel();
                         paneling.setBackground(Color.BLACK);
                         frame.remove(panelMain);
@@ -314,7 +328,7 @@ public final class Quiztekateki implements ActionListener{
                 } catch (InterruptedException e) {
                     System.out.println(e.getMessage());
                 }
-            }
+            
         }
         // public void cancelTimer() {
         //     isCancelled = true;
