@@ -133,8 +133,8 @@ public class Menu implements ActionListener{
         Image temp1 = gambar1.getImage();
         Image temp2 = gambar2.getImage();
         
-        gambar1 = new ImageIcon(temp1.getScaledInstance(200, 200, 0));
-        gambar2 = new ImageIcon(temp2.getScaledInstance(200, 200, 0));
+        gambar1 = new ImageIcon(temp1.getScaledInstance(300, 300, 0));
+        gambar2 = new ImageIcon(temp2.getScaledInstance(300, 300, 0));
 
         tekateki.setIcon(gambar1);
         gambar.setIcon(gambar2);
