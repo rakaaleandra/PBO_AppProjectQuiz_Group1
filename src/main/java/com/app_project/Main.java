@@ -5,6 +5,9 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.util.ArrayList;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -50,8 +53,23 @@ public class Main extends JFrame{
         
         frame.setVisible(true);
     }
+
+    static void playBackgroundSound(String filePath) {
+        try {
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(Main.class.getResource(filePath));
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioStream);
+            clip.loop(Clip.LOOP_CONTINUOUSLY); // Loop secara terus-menerus
+            clip.start();
+        } catch (Exception e) {
+            System.err.println("Error playing sound: " + e.getMessage());
+        }
+    }
+
     public static void main(String[] args) {
         awalan();
+
+        playBackgroundSound("/BackSound.wav"); // Path relatif ke file suara dalam resources
 
         Menu menu = new Menu(frame, background);
         
