@@ -305,11 +305,13 @@ public final class Quiztekateki implements ActionListener{
             timerView.setText(Integer.toString(duration));
 
             if (duration == 15) {
-                JPanel paneling = new JPanel();
-                paneling.setBackground(Color.BLACK);
-                framing.remove(panelMain);
-                framing.add(paneling);
-                frame.setVisible(true);
+                // JPanel paneling = new JPanel();
+                // paneling.setBackground(Color.BLACK);
+                // framing.remove(panelMain);
+                // framing.add(paneling);
+                // frame.setVisible(true);
+                JOptionPane.showMessageDialog(frame, "Waktumu Habis", "Game Over", JOptionPane.WARNING_MESSAGE);      
+                    System.exit(0);
                 timer.stop();
             }
 

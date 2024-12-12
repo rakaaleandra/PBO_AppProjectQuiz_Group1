@@ -60,6 +60,8 @@ public final class Quizgambar implements ActionListener{
         answer = new JTextField();
         submit = new JButton("Submit");
         submit.setFont(sourceSansPro.deriveFont(20f));
+        submit.setBackground(Color.WHITE);
+        submit.setForeground(Color.BLACK);
 
         stage = new JPanel(new BorderLayout());
         stage.setPreferredSize(new Dimension(250,100));
@@ -128,6 +130,9 @@ public final class Quizgambar implements ActionListener{
 
         povJawaban = new JPanel(new BorderLayout());
         hint = new JButton("HINT");
+        hint.setBackground(Color.WHITE);
+        hint.setForeground(Color.BLACK);
+        hint.setFont(sourceSansPro.deriveFont(20f));
         hint.addActionListener(this);
         submit.addActionListener(this);
         inJawaban = new JPanel(new BorderLayout());
