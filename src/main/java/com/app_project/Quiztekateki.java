@@ -8,6 +8,7 @@ import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.lang.runtime.TemplateRuntime;
 import java.util.ArrayList;
 
@@ -33,11 +34,19 @@ public final class Quiztekateki implements ActionListener{
     waktu time;
     int currentStage = 0;
     ArrayList<question> data;
+    Font sourceSansPro;
 
     Quiztekateki(JFrame frame, JLabel framing, ArrayList<question> data){
         this.data = data;
         this.frame = frame;
         this.framing = framing;
+
+        try {
+            sourceSansPro = Font.createFont(Font.TRUETYPE_FONT, new File("src/main/resources/Font/OpenSans-VariableFont_wdth,wght.ttf"));
+        } catch (Exception e) {
+            System.out.println("tidak bisa laod font");
+        }
+
         framing();
     }
 
@@ -61,7 +70,7 @@ public final class Quiztekateki implements ActionListener{
         pov = new JPanel(new BorderLayout(10,10));
         pov.add(pertanyaan, BorderLayout.CENTER);
         pov.add(jawaban, BorderLayout.SOUTH);
-        pov.setBackground(new Color(12,20,68,255));
+        pov.setBackground(new Color(23,5,45,255));
 
         for (int i = 0; i < 4; i++) {
             kosong1.add(new JPanel());
@@ -70,9 +79,9 @@ public final class Quiztekateki implements ActionListener{
             kosong1.get(i).setPreferredSize(new Dimension(10,10));
             kosong2.get(i).setPreferredSize(new Dimension(60,60));
             kosong3.get(i).setPreferredSize(new Dimension(10,10));
-            kosong1.get(i).setBackground(new Color(25,25,57,255));
-            kosong2.get(i).setBackground(new Color(25,25,57,255));
-            kosong3.get(i).setBackground(new Color(25,25,57,255));
+            kosong1.get(i).setBackground(new Color(23,5,45,255));
+            kosong2.get(i).setBackground(new Color(23,5,45,255));
+            kosong3.get(i).setBackground(new Color(23,5,45,255));
         }
         //before
         timerView = new JLabel();
@@ -93,11 +102,14 @@ public final class Quiztekateki implements ActionListener{
 
         try {
             inStage = new JPanel(new GridLayout(15,1));
+            inStage.setBackground(new Color(23,5,45,255));
             for (int i = 0; i < 15; ++i) {
                 level.add(new JLabel("Level " + (i+1)));
                 level.get(i).setForeground(Color.WHITE);
+                level.get(i).setFont(sourceSansPro.deriveFont(18f));
                 level.get(i).setVerticalAlignment(JLabel.CENTER);
                 level.get(i).setHorizontalAlignment(JLabel.CENTER);
+                level.get(i).setOpaque(false);
                 inStage.add(level.get(i));
                 if (level.size() == currentStage+1) {
                     level.get(i).setBackground(Color.WHITE);
@@ -122,36 +134,43 @@ public final class Quiztekateki implements ActionListener{
         answer.add(new JButton(data.get(currentStage).jawaban1));
         answer.get(0).setBackground(Color.WHITE);
         answer.get(0).setForeground(Color.BLACK);
+        answer.get(0).setFont(sourceSansPro.deriveFont(18f));
         answer.get(0).addActionListener(this);
         inJawaban.add(answer.get(0));
         answer.add(new JButton(data.get(currentStage).jawaban2));
         answer.get(1).setBackground(Color.WHITE);
         answer.get(1).setForeground(Color.BLACK);
+        answer.get(1).setFont(sourceSansPro.deriveFont(18f));
         answer.get(1).addActionListener(this);
         inJawaban.add(answer.get(1));
         answer.add(new JButton(data.get(currentStage).jawaban3));
         answer.get(2).setBackground(Color.WHITE);
         answer.get(2).setForeground(Color.BLACK);
+        answer.get(2).setFont(sourceSansPro.deriveFont(18f));
         answer.get(2).addActionListener(this);
         inJawaban.add(answer.get(2));
         answer.add(new JButton(data.get(currentStage).jawaban4));
         answer.get(3).setBackground(Color.WHITE);
         answer.get(3).setForeground(Color.BLACK);
+        answer.get(3).setFont(sourceSansPro.deriveFont(18f));
         answer.get(3).addActionListener(this);
         inJawaban.add(answer.get(3));
 
         jawaban.add(inJawaban, BorderLayout.CENTER);
 
         inPertanyaan = new JPanel(new GridBagLayout());
-        inPertanyaan.setBackground(new Color(25,25,57,255));
+        inPertanyaan.setBackground(new Color(23,5,45,255));
         question = new JLabel(data.get(currentStage).pertanyaan);
         question.setForeground(Color.WHITE);
+        // question.setFont(new Font("Arial", Font.BOLD, 20));
+        question.setFont(sourceSansPro.deriveFont(24f));
         inPertanyaan.add(question);
         pertanyaan.add(inPertanyaan, BorderLayout.CENTER);
 
         panelMain.add(pov, BorderLayout.CENTER);
         panelMain.add(stage, BorderLayout.WEST);
-        panelMain.setBackground(new Color(12,20,68,255));
+        // panelMain.setBackground(new Color(12,20,68,255));
+        panelMain.setOpaque(false);
 
         this.framing.add(panelMain);
         this.frame.setVisible(true);
@@ -168,7 +187,7 @@ public final class Quiztekateki implements ActionListener{
             }
             else{
                 time.berhenti();
-                JOptionPane.showMessageDialog(frame, "Game Over! Jawabanmu Salah.", "Game Over", JOptionPane.WARNING_MESSAGE);      
+                JOptionPane.showMessageDialog(frame, "Jawabanmu Salah.", "Game Over", JOptionPane.WARNING_MESSAGE);      
                     System.exit(0);
             }
         }
@@ -178,7 +197,7 @@ public final class Quiztekateki implements ActionListener{
             }
             else{
                 time.berhenti();
-                JOptionPane.showMessageDialog(frame, "Game Over! Jawabanmu Salah.", "Game Over", JOptionPane.WARNING_MESSAGE);      
+                JOptionPane.showMessageDialog(frame, "Jawabanmu Salah.", "Game Over", JOptionPane.WARNING_MESSAGE);      
                     System.exit(0);
                 
             }
@@ -189,7 +208,7 @@ public final class Quiztekateki implements ActionListener{
             }
             else{
                 time.berhenti();
-                JOptionPane.showMessageDialog(frame, "Game Over! Jawabanmu Salah.", "Game Over", JOptionPane.WARNING_MESSAGE);      
+                JOptionPane.showMessageDialog(frame, "Jawabanmu Salah.", "Game Over", JOptionPane.WARNING_MESSAGE);      
                     System.exit(0);
                     // new Menu(this.frame);
             }
@@ -216,7 +235,7 @@ public final class Quiztekateki implements ActionListener{
                 // this.frame.add(paneling, BorderLayout.CENTER);
                 // this.frame.setVisible(true);
                 time.berhenti();
-                JOptionPane.showMessageDialog(frame, "Game Over! Jawabanmu Salah.", "Game Over", JOptionPane.WARNING_MESSAGE);      
+                JOptionPane.showMessageDialog(frame, "Jawabanmu Salah.", "Game Over", JOptionPane.WARNING_MESSAGE);      
                     System.exit(0);
                 // time.interrupt();
             }
@@ -230,8 +249,9 @@ public final class Quiztekateki implements ActionListener{
             JPanel paneling = new JPanel(new GridBagLayout());
             JLabel label = new JLabel("Jawabanmu benar");
             label.setForeground(Color.WHITE);
-            label.setFont(new Font("Arial", Font.BOLD, 20));
-            paneling.setBackground(new Color(25,25,57,255));
+            // label.setFont(new Font("Arial", Font.BOLD, 20));
+            label.setFont(sourceSansPro.deriveFont(30f));
+            paneling.setBackground(new Color(23,5,45,255));
             paneling.add(label);
             this.pov.remove(pertanyaan);
             this.pov.remove(jawaban);
@@ -240,15 +260,8 @@ public final class Quiztekateki implements ActionListener{
             rehat();
         }
         else if (currentStage == 15) {
-            JPanel paneling = new JPanel();
-            JLabel label = new JLabel("Selamat Anda Berhasil");
-            label.setForeground(Color.WHITE);
-            label.setFont(new Font("Arial", Font.BOLD, 20));
-            paneling.setBackground(Color.BLACK);
-            paneling.add(label);
-            this.framing.remove(panelMain);
-            this.framing.add(paneling, BorderLayout.CENTER);
-            this.frame.setVisible(true);
+            JOptionPane.showMessageDialog(frame, "<html>Karena Anda menang, maka Anda akan<br>mendapatkan hadiah dari admin<br>Silahkan hubungi : +62 812-3167-1474</html>", "Selamat Anda Berhasil", JOptionPane.WARNING_MESSAGE);      
+                System.exit(0);
         }
     }
 
