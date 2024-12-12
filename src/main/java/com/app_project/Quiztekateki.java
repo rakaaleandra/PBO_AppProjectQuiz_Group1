@@ -85,6 +85,7 @@ public final class Quiztekateki implements ActionListener{
         }
         //before
         timerView = new JLabel();
+        timerView.setFont(sourceSansPro.deriveFont(20f));
         kosong2.get(0).add(timerView);
 
         stage.add(kosong1.get(0), BorderLayout.NORTH);

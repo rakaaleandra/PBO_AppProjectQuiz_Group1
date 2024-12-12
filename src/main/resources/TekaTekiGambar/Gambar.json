@@ -1,0 +1,53 @@
+{
+    "array": [
+        {
+            "link": "src/main/source/TekaTekiGambar/1-9/CristianoRonaldo.png",
+            "benar": ["Cristiano Ronaldo", "cristiano ronaldo", "Cristiano", "Ronaldo", "cristiano", "ronaldo"],
+            "hint" : "Idolanya IShowSpeed"
+        },
+        {
+            "link": "src/main/source/TekaTekiGambar/1-9/JeonJungkook.png",
+            "benar": ["Jeon Jungkook", "jeon jungkook", "Jungkook", "jungkook"],
+            "hint" : "Member BTS"
+        },
+        {
+            "link": "src/main/source/TekaTekiGambar/1-9/RanoKarno.png",
+            "benar": ["Rano Karno", "rano karno"],
+            "hint" : "Anak Betawi Asli"
+        },{
+            "link": "src/main/source/TekaTekiGambar/1-9/LionelMessi.png",
+            "benar": ["Lionel Messi", "lionel messi", "Lionel", "Messi", "lionel", "messi"],
+            "hint" : "Anak Kesayangan FIFA"
+        },
+        {
+            "link": "src/main/source/TekaTekiGambar/1-9/Hajime Isayama",
+            "benar": ["Hajime Isayama", "hajime isayama"],
+            "hint" : "Shinzou wo Sasageyo"
+        },
+        {
+            "link": "src/main/source/TekaTekiGambar/1-9/BaskaraPutra",
+            "benar": ["Baskara Putra", "baskara putra"],
+            "hint" : "Berdansalah, Karir Ini Tak Ada Artinya"
+        },
+        {
+            "link": "src/main/source/TekaTekiGambar/1-9/SteveJobs.png",
+            "benar": ["Steve Jobs", "steve jobs"],
+            "hint" : "Founder Apple"
+        },
+        {
+            "link": "src/main/source/TekaTekiGambar/1-9/LarryPage.png",
+            "benar": ["Larry Page", "larry page"],
+            "hint" : "Founder Google"
+        },
+        {
+            "link": "src/main/source/TekaTekiGambar/1-9/AlanTuring.png",
+            "benar": ["Alan Turing", "alan turing"],
+            "hint" : "Pemecah Kode Enigma"
+        },
+        {
+            "link": "src/main/source/TekaTekiGambar/1-9/PeterChen.png",
+            "benar": ["Peter Chen", "peter chen"],
+            "hint" : "Penemu ERD"
+        }
+    ]
+}

@@ -30,7 +30,8 @@ public final class Data {
         pengisianTekaTeki("src/main/java/com/app_project/data/Game.json");
         pengisianTekaTeki("src/main/java/com/app_project/data/Geografi.json");
         pengisianTekaTeki("src/main/java/com/app_project/data/PengetahuanUmum.json");
-        pengisianGambar("src/main/java/com/app_project/data/Gambar.json");
+        // pengisianGambar("src/main/java/com/app_project/data/Gambar.json");
+        pengisianGambar("src/main/java/com/app_project/data/Gambar(2).json");
 
         for (int i = 0; i < 15; ++i) {
             question temp;
@@ -55,8 +56,13 @@ public final class Data {
             }
             dataListGambarFix.add(temp);
         }
-        spesial.link = "src/main/resources/TekaTekiGambar/10 Pertanyaan/DosenAwal.png";
-        spesial.answerRight = "Afrizal";
+        spesial.link = "src/main/resources/TekaTekiGambar/10 Jawaban/DosenAkhir.png";
+        spesial.answerRight = new ArrayList<>();
+        spesial.answerRight.add("Afrizal");
+        spesial.answerRight.add("afrizal");
+        spesial.answerRight.add("Afrizal Doewes");
+        spesial.answerRight.add("afrizal doewes");
+        spesial.hint = "Dosen PBO";
         dataListGambarFix.add(spesial);
     }
 
@@ -105,9 +111,14 @@ public final class Data {
             for (int i = 0; i < arey.length(); i++) {
                 JSONObject item = arey.getJSONObject(i);
                 temp = new picture();
+                temp.answerRight = new ArrayList<>();
                 
-                temp.link = item.getString("gambar");
-                temp.answerRight = item.getString("benar");
+                temp.link = item.getString("link");
+                JSONArray arey2 = item.getJSONArray("benar");
+                for (int j = 0; j < arey2.length(); j++) {
+                    temp.answerRight.add(arey2.getString(j));
+                }
+                temp.hint = item.getString("hint");
 
                 dataListGambar.add(temp);
             }
@@ -115,7 +126,10 @@ public final class Data {
             //tester
             // for (int i = 0; i < dataListGambar.size(); i++) {
             //     System.out.println(dataListGambar.get(i).link);
-            //     System.out.println(dataListGambar.get(i).answerRight);      
+            //     for (int j = 0; j < dataListGambar.get(i).answerRight.size(); j++) {
+            //         System.out.println(dataListGambar.get(i).answerRight.get(j));      
+            //     }
+            //     System.out.println(dataListGambar.get(i).hint);
             // }
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
@@ -141,6 +155,7 @@ public final class Data {
     }
     public class picture{
         String link;
-        String answerRight;
+        ArrayList<String> answerRight;
+        String hint;
     }
 }
