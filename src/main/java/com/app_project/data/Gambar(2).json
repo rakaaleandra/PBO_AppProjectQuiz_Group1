@@ -1,0 +1,103 @@
+{
+    "array": [
+        {
+            "link": "src/main/source/TekaTekiGambar/1-9/CristianoRonaldo.png",
+            "benar": ["Cristiano Ronaldo", "cristiano ronaldo", "Cristiano", "Ronaldo", "cristiano", "ronaldo"],
+            "hint" : "Idolanya IShowSpeed"
+        },
+        {
+            "link": "src/main/source/TekaTekiGambar/1-9/JeonJungkook.png",
+            "benar": ["Jeon Jungkook", "jeon jungkook", "Jungkook", "jungkook"],
+            "hint" : "Member BTS"
+        },
+        {
+            "link": "src/main/resources/TekaTekiGambar/1-9/RanoKarno.png",
+            "benar": ["Rano Karno", "rano karno"],
+            "hint" : "Anak Betawi Asli"
+        },{
+            "link": "src/main/resources/TekaTekiGambar/1-9/LionelMessi.png",
+            "benar": ["Lionel Messi", "lionel messi", "Lionel", "Messi", "lionel", "messi"],
+            "hint" : "Anak Kesayangan FIFA"
+        },
+        {
+            "link": "src/main/resources/TekaTekiGambar/1-9/HajimeIsayama.png",
+            "benar": ["Hajime Isayama", "hajime isayama"],
+            "hint" : "Shinzou wo Sasageyo"
+        },
+        {
+            "link": "src/main/resources/TekaTekiGambar/1-9/BaskaraPutra.png",
+            "benar": ["Baskara Putra", "baskara putra"],
+            "hint" : "Berdansalah, Karir Ini Tak Ada Artinya"
+        },
+        {
+            "link": "src/main/resources/TekaTekiGambar/1-9/SteveJobs.png",
+            "benar": ["Steve Jobs", "steve jobs"],
+            "hint" : "Apple"
+        },
+        {
+            "link": "src/main/resources/TekaTekiGambar/1-9/LarryPage.png",
+            "benar": ["Larry Page", "larry page"],
+            "hint" : "Google"
+        },
+        {
+            "link": "src/main/resources/TekaTekiGambar/1-9/AlanTuring.png",
+            "benar": ["Alan Turing", "alan turing"],
+            "hint" : "Kode Enigma"
+        },
+        {
+            "link": "src/main/resources/TekaTekiGambar/1-9/PeterChen.png",
+            "benar": ["Peter Chen", "peter chen"],
+            "hint" : "ERD"
+        },
+        {
+            "link": "src/main/resources/TekaTekiGambar/1-9/ElonMusk.png",
+            "benar": ["Elon Musk", "elon musk"],
+            "hint" : "ChatGPT"
+        },
+        {
+            "link": "src/main/resources/TekaTekiGambar/1-9/JamesGosling.png",
+            "benar": ["JamesGosling", "james gosling"],
+            "hint" : "Java"
+        },
+        {
+            "link": "src/main/resources/TekaTekiGambar/1-9/GabrielBarbosa.png",
+            "benar": ["Gabriel Barbosa", "gabriel barbosa"],
+            "hint" : "Gabigol"
+        },
+        {
+            "link": "src/main/resources/TekaTekiGambar/1-9/GabrielBarbosa.png",
+            "benar": ["Gabriel Barbosa", "gabriel barbosa"],
+            "hint" : "Gabigol"
+        },
+        {
+            "link": "src/main/resources/TekaTekiGambar/1-9/NikolaTesla.png",
+            "benar": ["Nikola Tesla", "nikola tesla"],
+            "hint" : "Arus Listrik AC"
+        },
+        {
+            "link": "src/main/resources/TekaTekiGambar/1-9/AldiTaher.png",
+            "benar": ["Aldi Taher", "aldi taher"],
+            "hint" : "Nanti Tidak Bingung Kalo Sudah di Surga"
+        },
+        {
+            "link": "src/main/resources/TekaTekiGambar/1-9/AryaWiguna.png",
+            "benar": ["Arya Wiguna", "arya wiguna"],
+            "hint" : "Demi Tuhan"
+        },
+        {
+            "link": "src/main/resources/TekaTekiGambar/1-9/CokiPardede.png",
+            "benar": ["Coki Pardede", "Coki Pardede"],
+            "hint" : "Chuaks"
+        },
+        {
+            "link": "src/main/resources/TekaTekiGambar/1-9/FajarSadboy.png",
+            "benar": ["Fajar", "Fajar Sadboy", "fajar sadboy"],
+            "hint" : "Dia yang Ke Pelaminan, Saya yang Jadi Tamu Undangan"
+        },
+        {
+            "link": "src/main/resources/TekaTekiGambar/1-9/WindahBasudara.png",
+            "benar": ["Windah", "Windah Basudara", "windah basudara","windah"],
+            "hint" : "Teori Tanpa Teori"
+        }
+    ]
+}

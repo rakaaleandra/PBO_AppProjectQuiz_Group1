@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -28,7 +29,7 @@ public final class Quizgambar implements ActionListener{
     JTextField answer;
     JButton submit;
     ImageIcon question;
-    JLabel questionLabel;
+    JLabel questionLabel, hintLabel;
     JButton hint;
     int currentStage = 0, hintCapacity = 0;
     JFrame frame;
@@ -80,7 +81,7 @@ public final class Quizgambar implements ActionListener{
             kosong2.add(new JPanel());
             kosong3.add(new JPanel());
             kosong1.get(i).setPreferredSize(new Dimension(10,10));
-            kosong2.get(i).setPreferredSize(new Dimension(10,10));
+            kosong2.get(i).setPreferredSize(new Dimension(30,30));
             kosong3.get(i).setPreferredSize(new Dimension(30,30));
             kosong1.get(i).setBackground(new Color(23,5,45,255));
             kosong2.get(i).setBackground(new Color(23,5,45,255));
@@ -92,6 +93,10 @@ public final class Quizgambar implements ActionListener{
         stage.add(kosong1.get(3), BorderLayout.EAST);
         pertanyaan.add(kosong2.get(0), BorderLayout.NORTH);
         pertanyaan.add(kosong2.get(1), BorderLayout.WEST);
+        hintLabel = new JLabel();
+        hintLabel.setFont(sourceSansPro.deriveFont(16f));
+        hintLabel.setForeground(Color.WHITE);
+        kosong2.get(2).add(hintLabel);
         pertanyaan.add(kosong2.get(2), BorderLayout.SOUTH);
         pertanyaan.add(kosong2.get(3), BorderLayout.EAST);
         jawaban.add(kosong3.get(0), BorderLayout.NORTH);
@@ -135,7 +140,7 @@ public final class Quizgambar implements ActionListener{
         jawaban.add(povJawaban, BorderLayout.CENTER);
         pov.setBackground(new Color(23,5,45,255));
 
-        inPertanyaan = new JPanel();
+        inPertanyaan = new JPanel(new GridBagLayout());
         question = new ImageIcon(data.get(currentStage).link);
         questionLabel = new JLabel(question);
         inPertanyaan.add(questionLabel);
@@ -156,11 +161,13 @@ public final class Quizgambar implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == hint) {
             --hintCapacity;
-            System.out.println("hint");
+            hintLabel.setText(data.get(currentStage).hint);
+            System.out.println(data.get(currentStage).hint);
         }
         else if (e.getSource() == submit || e.getSource() == submit) {
             String jawab = answer.getText();
-            if (jawab.equals(data.get(currentStage).answerRight)) {
+            // if (jawab.equals(data.get(currentStage).answerRight)) {
+            if (data.get(currentStage).answerRight.contains(jawab)) {
                 if (currentStage == 9) {
                     // JPanel paneling = new JPanel();
                     // JLabel label = new JLabel("Selamat Anda Berhasil");
@@ -179,6 +186,9 @@ public final class Quizgambar implements ActionListener{
                 }
             }
             else {
+                JOptionPane.showMessageDialog(frame, "Jawabanmu Salah.", "Game Over", JOptionPane.WARNING_MESSAGE);      
+                System.exit(0);
+                
             }
         }
     }
