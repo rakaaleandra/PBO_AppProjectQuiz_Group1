@@ -188,8 +188,9 @@ public final class Quiztekateki implements ActionListener{
             }
             else{
                 time.berhenti();
+                framing.remove(panelMain);
                 JOptionPane.showMessageDialog(frame, "Jawabanmu Salah.", "Game Over", JOptionPane.WARNING_MESSAGE);      
-                    System.exit(0);
+                    Menu menu = new Menu(frame, framing);
             }
         }
         if (e.getSource() == answer.get(1)) {
@@ -198,8 +199,9 @@ public final class Quiztekateki implements ActionListener{
             }
             else{
                 time.berhenti();
+                framing.remove(panelMain);
                 JOptionPane.showMessageDialog(frame, "Jawabanmu Salah.", "Game Over", JOptionPane.WARNING_MESSAGE);      
-                    System.exit(0);
+                    Menu menu = new Menu(frame, framing);
                 
             }
         }
@@ -209,9 +211,10 @@ public final class Quiztekateki implements ActionListener{
             }
             else{
                 time.berhenti();
+                framing.remove(panelMain);
                 JOptionPane.showMessageDialog(frame, "Jawabanmu Salah.", "Game Over", JOptionPane.WARNING_MESSAGE);      
-                    System.exit(0);
-                    // new Menu(this.frame);
+                    Menu menu = new Menu(frame, framing);
+                    
             }
         }
         if (e.getSource() == answer.get(3)) {
@@ -236,8 +239,9 @@ public final class Quiztekateki implements ActionListener{
                 // this.frame.add(paneling, BorderLayout.CENTER);
                 // this.frame.setVisible(true);
                 time.berhenti();
+                framing.remove(panelMain);
                 JOptionPane.showMessageDialog(frame, "Jawabanmu Salah.", "Game Over", JOptionPane.WARNING_MESSAGE);      
-                    System.exit(0);
+                    Menu menu = new Menu(frame, framing);
                 // time.interrupt();
             }
         }
@@ -314,7 +318,6 @@ public final class Quiztekateki implements ActionListener{
                     System.exit(0);
                 timer.stop();
             }
-
         }
 
         public void berhenti(){
