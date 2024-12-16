@@ -30,10 +30,31 @@ public final class Data {
         pengisianTekaTeki("src/main/java/com/app_project/data/Game.json");
         pengisianTekaTeki("src/main/java/com/app_project/data/Geografi.json");
         pengisianTekaTeki("src/main/java/com/app_project/data/PengetahuanUmum.json");
-        // pengisianGambar("src/main/java/com/app_project/data/Gambar.json");
         pengisianGambar("src/main/java/com/app_project/data/Gambar(2).json");
 
-        for (int i = 0; i < 15; ++i) {
+        for (int i = 0; i < 5; ++i) {
+            question temp;
+            for (;;) {
+                temp = category.get(rand.nextInt(category.size())).get(rand.nextInt(5));
+                if (!used1.contains(temp)) {
+                    used1.add(temp);
+                    break;
+                }
+            }
+            dataListTeka.add(temp);
+        }
+        for (int i = 5; i < 10; ++i) {
+            question temp;
+            for (;;) {
+                temp = category.get(rand.nextInt(category.size())).get(rand.nextInt(10));
+                if (!used1.contains(temp)) {
+                    used1.add(temp);
+                    break;
+                }
+            }
+            dataListTeka.add(temp);
+        }
+        for (int i = 10; i < 15; ++i) {
             question temp;
             for (;;) {
                 temp = category.get(rand.nextInt(category.size())).get(rand.nextInt(15));
