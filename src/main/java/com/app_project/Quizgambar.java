@@ -183,16 +183,18 @@ public final class Quizgambar implements ActionListener{
                     // this.framing.remove(panelMain);
                     // this.framing.add(paneling, BorderLayout.CENTER);
                     // this.frame.setVisible(true);
+                    framing.remove(panelMain);
                     JOptionPane.showMessageDialog(frame, "<html>Karena Anda menang, maka Anda akan<br>mendapatkan hadiah dari admin<br>Silahkan hubungi : +62 812-3167-1474</html>", "Selamat Anda Berhasil", JOptionPane.WARNING_MESSAGE);      
-                        System.exit(0);
+                        Menu menu = new Menu(frame, framing);
                 }
                 else if (currentStage < 9){
                     levelUp();
                 }
             }
             else {
+                framing.remove(panelMain);
                 JOptionPane.showMessageDialog(frame, "Jawabanmu Salah.", "Game Over", JOptionPane.WARNING_MESSAGE);      
-                System.exit(0);
+                    Menu menu = new Menu(frame, framing);
                 
             }
         }

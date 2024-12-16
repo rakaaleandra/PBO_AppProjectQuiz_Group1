@@ -144,6 +144,8 @@ public class Menu implements ActionListener{
                 this.framing.add(title, BorderLayout.NORTH);
                 this.framing.add(panelMain, BorderLayout.CENTER);
                 // frame.add(kosong.get(0), BorderLayout.WEST);
+                
+                this.frame.setVisible(true);
             });
             
         }catch(UnsupportedLookAndFeelException e){
